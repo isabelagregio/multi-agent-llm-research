@@ -2,10 +2,6 @@
 
 Research project investigating **when LLM agents should interact, when they should stop, and how adaptive routing can reduce computational cost and harmful error propagation**.
 
-<p align="center">
-  <img src="results/experiment_G_risk_gated_adaptive_debate/accuracy_vs_tokens.png" width="760" alt="Accuracy versus token cost">
-</p>
-
 ## Research Question
 
 > When should an LLM system use additional interaction, and when should it stop, in order to improve reasoning without unnecessary computational cost or added failure risk?
@@ -41,23 +37,19 @@ Adaptive stopping used about **27% fewer tokens than R2** and **47% fewer than R
 
 ## Current Method: Risk-Aware Adaptive Routing
 
-The final research direction models both the expected benefit and risk of another interaction round.
+The final research direction models both the **expected benefit** and the **expected risk** of another interaction round.
 
-At interaction state \(s_r\), the router estimates:
+At each interaction state, the router estimates:
 
-\[
-P(\text{help}\mid s_r)
-\]
+- `P(help | current state)`
+- `P(harm | current state)`
 
-and
+where:
 
-\[
-P(\text{harm}\mid s_r),
-\]
+- `help` means that another interaction changes the result from **wrong → correct**;
+- `harm` means that another interaction changes the result from **correct → wrong**.
 
-where `help` represents a `wrong → correct` transition and `harm` represents a `correct → wrong` transition.
-
-The system continues interaction only when predicted benefit sufficiently exceeds predicted risk.
+The system continues interacting only when the predicted benefit sufficiently exceeds the predicted risk.
 
 Runtime signals include:
 
