@@ -1,0 +1,897 @@
+{
+  "repetition": 2,
+  "questions": 500,
+  "round_values": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "single_accuracy": 0.618,
+  "single_total_tokens": 253473,
+  "checkpoints": [
+    {
+      "method": "self_refine",
+      "round": 0,
+      "accuracy": 0.618,
+      "accuracy_gain_vs_single": 0.0,
+      "protocol_generation_calls_per_question": 1,
+      "protocol_total_tokens": 253473,
+      "protocol_mean_tokens_per_question": 506.946,
+      "protocol_wall_time_seconds": 53.62466677557677,
+      "corrections_vs_single": {
+        "positive_corrections": 0,
+        "negative_corrections": 0,
+        "positive_correction_rate": 0.0,
+        "negative_correction_rate": 0.0
+      },
+      "corrections_vs_previous_round": null,
+      "extra_tokens_vs_single": 0,
+      "accuracy_gain_per_1k_extra_tokens": null
+    },
+    {
+      "method": "student_critic",
+      "round": 0,
+      "accuracy": 0.618,
+      "accuracy_gain_vs_single": 0.0,
+      "protocol_generation_calls_per_question": 1,
+      "protocol_total_tokens": 253473,
+      "protocol_mean_tokens_per_question": 506.946,
+      "protocol_wall_time_seconds": 53.62466677557677,
+      "corrections_vs_single": {
+        "positive_corrections": 0,
+        "negative_corrections": 0,
+        "positive_correction_rate": 0.0,
+        "negative_correction_rate": 0.0
+      },
+      "corrections_vs_previous_round": null,
+      "extra_tokens_vs_single": 0,
+      "accuracy_gain_per_1k_extra_tokens": null
+    },
+    {
+      "method": "debate",
+      "round": 0,
+      "accuracy": 0.75,
+      "accuracy_gain_vs_single": 0.132,
+      "protocol_generation_calls_per_question": 3,
+      "protocol_total_tokens": 1048448,
+      "protocol_mean_tokens_per_question": 2096.896,
+      "protocol_wall_time_seconds": 162.77591795660555,
+      "corrections_vs_single": {
+        "positive_corrections": 73,
+        "negative_corrections": 7,
+        "positive_correction_rate": 0.38219895287958117,
+        "negative_correction_rate": 0.022653721682847898
+      },
+      "corrections_vs_previous_round": null,
+      "agent_a_accuracy": 0.618,
+      "agent_b_accuracy": 0.608,
+      "disagreement_rate": 0.42,
+      "consensus_rate": 0.5800000000000001,
+      "extra_tokens_vs_single": 794975,
+      "accuracy_gain_per_1k_extra_tokens": 0.00016604295732570206
+    },
+    {
+      "method": "self_refine",
+      "round": 1,
+      "accuracy": 0.738,
+      "accuracy_gain_vs_single": 0.12,
+      "protocol_generation_calls_per_question": 3,
+      "protocol_total_tokens": 1144557,
+      "protocol_mean_tokens_per_question": 2289.114,
+      "protocol_wall_time_seconds": 163.4818713418208,
+      "corrections_vs_single": {
+        "positive_corrections": 64,
+        "negative_corrections": 4,
+        "positive_correction_rate": 0.33507853403141363,
+        "negative_correction_rate": 0.012944983818770227
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 64,
+        "negative_corrections": 4,
+        "positive_correction_rate": 0.33507853403141363,
+        "negative_correction_rate": 0.012944983818770227
+      },
+      "extra_tokens_vs_single": 891084,
+      "accuracy_gain_per_1k_extra_tokens": 0.00013466743875998222
+    },
+    {
+      "method": "student_critic",
+      "round": 1,
+      "accuracy": 0.708,
+      "accuracy_gain_vs_single": 0.08999999999999997,
+      "protocol_generation_calls_per_question": 3,
+      "protocol_total_tokens": 981909,
+      "protocol_mean_tokens_per_question": 1963.818,
+      "protocol_wall_time_seconds": 125.89237680658698,
+      "corrections_vs_single": {
+        "positive_corrections": 53,
+        "negative_corrections": 8,
+        "positive_correction_rate": 0.2774869109947644,
+        "negative_correction_rate": 0.025889967637540454
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 53,
+        "negative_corrections": 8,
+        "positive_correction_rate": 0.2774869109947644,
+        "negative_correction_rate": 0.025889967637540454
+      },
+      "critic_quality_this_round": {
+        "true_reject": 89,
+        "false_reject": 16,
+        "true_accept": 293,
+        "false_accept": 102,
+        "unknown_verdict": 0,
+        "error_detection_precision": 0.8476190476190476,
+        "error_detection_recall": 0.46596858638743455,
+        "error_detection_f1": 0.6013513513513514,
+        "corrections_vs_previous_round": {
+          "positive_corrections": 53,
+          "negative_corrections": 8,
+          "positive_correction_rate": 0.2774869109947644,
+          "negative_correction_rate": 0.025889967637540454
+        }
+      },
+      "extra_tokens_vs_single": 728436,
+      "accuracy_gain_per_1k_extra_tokens": 0.00012355237797143464
+    },
+    {
+      "method": "debate",
+      "round": 1,
+      "accuracy": 0.738,
+      "accuracy_gain_vs_single": 0.12,
+      "protocol_generation_calls_per_question": 5,
+      "protocol_total_tokens": 1986479,
+      "protocol_mean_tokens_per_question": 3972.958,
+      "protocol_wall_time_seconds": 271.1588672697544,
+      "corrections_vs_single": {
+        "positive_corrections": 77,
+        "negative_corrections": 17,
+        "positive_correction_rate": 0.4031413612565445,
+        "negative_correction_rate": 0.05501618122977346
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 24,
+        "negative_corrections": 30,
+        "positive_correction_rate": 0.192,
+        "negative_correction_rate": 0.08
+      },
+      "agent_a_accuracy": 0.726,
+      "agent_b_accuracy": 0.746,
+      "disagreement_rate": 0.228,
+      "consensus_rate": 0.772,
+      "extra_tokens_vs_single": 1733006,
+      "accuracy_gain_per_1k_extra_tokens": 6.924384566470053e-05
+    },
+    {
+      "method": "self_refine",
+      "round": 2,
+      "accuracy": 0.76,
+      "accuracy_gain_vs_single": 0.14200000000000002,
+      "protocol_generation_calls_per_question": 5,
+      "protocol_total_tokens": 1873070,
+      "protocol_mean_tokens_per_question": 3746.14,
+      "protocol_wall_time_seconds": 263.50089821452275,
+      "corrections_vs_single": {
+        "positive_corrections": 83,
+        "negative_corrections": 12,
+        "positive_correction_rate": 0.43455497382198954,
+        "negative_correction_rate": 0.038834951456310676
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 27,
+        "negative_corrections": 16,
+        "positive_correction_rate": 0.20610687022900764,
+        "negative_correction_rate": 0.04336043360433604
+      },
+      "extra_tokens_vs_single": 1619597,
+      "accuracy_gain_per_1k_extra_tokens": 8.767613177846095e-05
+    },
+    {
+      "method": "student_critic",
+      "round": 2,
+      "accuracy": 0.702,
+      "accuracy_gain_vs_single": 0.08399999999999996,
+      "protocol_generation_calls_per_question": 5,
+      "protocol_total_tokens": 1498483,
+      "protocol_mean_tokens_per_question": 2996.966,
+      "protocol_wall_time_seconds": 189.5724925431423,
+      "corrections_vs_single": {
+        "positive_corrections": 66,
+        "negative_corrections": 24,
+        "positive_correction_rate": 0.34554973821989526,
+        "negative_correction_rate": 0.07766990291262135
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 22,
+        "negative_corrections": 25,
+        "positive_correction_rate": 0.1506849315068493,
+        "negative_correction_rate": 0.07062146892655367
+      },
+      "critic_quality_this_round": {
+        "true_reject": 104,
+        "false_reject": 120,
+        "true_accept": 234,
+        "false_accept": 42,
+        "unknown_verdict": 0,
+        "error_detection_precision": 0.4642857142857143,
+        "error_detection_recall": 0.7123287671232876,
+        "error_detection_f1": 0.5621621621621622,
+        "corrections_vs_previous_round": {
+          "positive_corrections": 22,
+          "negative_corrections": 25,
+          "positive_correction_rate": 0.1506849315068493,
+          "negative_correction_rate": 0.07062146892655367
+        }
+      },
+      "extra_tokens_vs_single": 1245010,
+      "accuracy_gain_per_1k_extra_tokens": 6.746933759568193e-05
+    },
+    {
+      "method": "debate",
+      "round": 2,
+      "accuracy": 0.74,
+      "accuracy_gain_vs_single": 0.122,
+      "protocol_generation_calls_per_question": 7,
+      "protocol_total_tokens": 2584047,
+      "protocol_mean_tokens_per_question": 5168.094,
+      "protocol_wall_time_seconds": 336.2352765207179,
+      "corrections_vs_single": {
+        "positive_corrections": 79,
+        "negative_corrections": 18,
+        "positive_correction_rate": 0.41361256544502617,
+        "negative_correction_rate": 0.05825242718446602
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 22,
+        "negative_corrections": 21,
+        "positive_correction_rate": 0.16793893129770993,
+        "negative_correction_rate": 0.056910569105691054
+      },
+      "agent_a_accuracy": 0.752,
+      "agent_b_accuracy": 0.754,
+      "disagreement_rate": 0.156,
+      "consensus_rate": 0.844,
+      "extra_tokens_vs_single": 2330574,
+      "accuracy_gain_per_1k_extra_tokens": 5.234761908439723e-05
+    },
+    {
+      "method": "self_refine",
+      "round": 3,
+      "accuracy": 0.746,
+      "accuracy_gain_vs_single": 0.128,
+      "protocol_generation_calls_per_question": 7,
+      "protocol_total_tokens": 2560703,
+      "protocol_mean_tokens_per_question": 5121.406,
+      "protocol_wall_time_seconds": 357.63200745824724,
+      "corrections_vs_single": {
+        "positive_corrections": 82,
+        "negative_corrections": 18,
+        "positive_correction_rate": 0.4293193717277487,
+        "negative_correction_rate": 0.05825242718446602
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 13,
+        "negative_corrections": 20,
+        "positive_correction_rate": 0.10833333333333334,
+        "negative_correction_rate": 0.05263157894736842
+      },
+      "extra_tokens_vs_single": 2307230,
+      "accuracy_gain_per_1k_extra_tokens": 5.547778071540332e-05
+    },
+    {
+      "method": "student_critic",
+      "round": 3,
+      "accuracy": 0.69,
+      "accuracy_gain_vs_single": 0.07199999999999995,
+      "protocol_generation_calls_per_question": 7,
+      "protocol_total_tokens": 2033399,
+      "protocol_mean_tokens_per_question": 4066.798,
+      "protocol_wall_time_seconds": 250.37269467348233,
+      "corrections_vs_single": {
+        "positive_corrections": 63,
+        "negative_corrections": 27,
+        "positive_correction_rate": 0.3298429319371728,
+        "negative_correction_rate": 0.08737864077669903
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 14,
+        "negative_corrections": 20,
+        "positive_correction_rate": 0.09395973154362416,
+        "negative_correction_rate": 0.05698005698005698
+      },
+      "critic_quality_this_round": {
+        "true_reject": 99,
+        "false_reject": 69,
+        "true_accept": 282,
+        "false_accept": 50,
+        "unknown_verdict": 0,
+        "error_detection_precision": 0.5892857142857143,
+        "error_detection_recall": 0.6644295302013423,
+        "error_detection_f1": 0.6246056782334386,
+        "corrections_vs_previous_round": {
+          "positive_corrections": 14,
+          "negative_corrections": 20,
+          "positive_correction_rate": 0.09395973154362416,
+          "negative_correction_rate": 0.05698005698005698
+        }
+      },
+      "extra_tokens_vs_single": 1779926,
+      "accuracy_gain_per_1k_extra_tokens": 4.0451119878017373e-05
+    },
+    {
+      "method": "debate",
+      "round": 3,
+      "accuracy": 0.722,
+      "accuracy_gain_vs_single": 0.10399999999999998,
+      "protocol_generation_calls_per_question": 9,
+      "protocol_total_tokens": 3106241,
+      "protocol_mean_tokens_per_question": 6212.482,
+      "protocol_wall_time_seconds": 393.08042284846306,
+      "corrections_vs_single": {
+        "positive_corrections": 73,
+        "negative_corrections": 21,
+        "positive_correction_rate": 0.38219895287958117,
+        "negative_correction_rate": 0.06796116504854369
+      },
+      "corrections_vs_previous_round": {
+        "positive_corrections": 13,
+        "negative_corrections": 22,
+        "positive_correction_rate": 0.1,
+        "negative_correction_rate": 0.05945945945945946
+      },
+      "agent_a_accuracy": 0.748,
+      "agent_b_accuracy": 0.764,
+      "disagreement_rate": 0.13,
+      "consensus_rate": 0.87,
+      "extra_tokens_vs_single": 2852768,
+      "accuracy_gain_per_1k_extra_tokens": 3.6455821153350004e-05
+    }
+  ],
+  "difficulty_analysis": [
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 0,
+      "accuracy": 0.9,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 1,
+      "accuracy": 0.92,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.020000000000000018
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 2,
+      "accuracy": 0.92,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.020000000000000018
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 3,
+      "accuracy": 0.91,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.010000000000000009
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 0,
+      "accuracy": 0.9,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 1,
+      "accuracy": 0.92,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.020000000000000018
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 2,
+      "accuracy": 0.9,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 3,
+      "accuracy": 0.91,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.010000000000000009
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "debate",
+      "round": 0,
+      "accuracy": 0.95,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.04999999999999993
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "debate",
+      "round": 1,
+      "accuracy": 0.93,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.030000000000000027
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "debate",
+      "round": 2,
+      "accuracy": 0.93,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.030000000000000027
+    },
+    {
+      "level": 1,
+      "questions": 100,
+      "method": "debate",
+      "round": 3,
+      "accuracy": 0.93,
+      "single_accuracy": 0.9,
+      "gain_vs_single": 0.030000000000000027
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 0,
+      "accuracy": 0.8,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 1,
+      "accuracy": 0.84,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.039999999999999925
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 2,
+      "accuracy": 0.81,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.010000000000000009
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 3,
+      "accuracy": 0.82,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.019999999999999907
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 0,
+      "accuracy": 0.8,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 1,
+      "accuracy": 0.81,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.010000000000000009
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 2,
+      "accuracy": 0.78,
+      "single_accuracy": 0.8,
+      "gain_vs_single": -0.020000000000000018
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 3,
+      "accuracy": 0.78,
+      "single_accuracy": 0.8,
+      "gain_vs_single": -0.020000000000000018
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "debate",
+      "round": 0,
+      "accuracy": 0.85,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.04999999999999993
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "debate",
+      "round": 1,
+      "accuracy": 0.86,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.05999999999999994
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "debate",
+      "round": 2,
+      "accuracy": 0.82,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.019999999999999907
+    },
+    {
+      "level": 2,
+      "questions": 100,
+      "method": "debate",
+      "round": 3,
+      "accuracy": 0.82,
+      "single_accuracy": 0.8,
+      "gain_vs_single": 0.019999999999999907
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 0,
+      "accuracy": 0.62,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 1,
+      "accuracy": 0.79,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.17000000000000004
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 2,
+      "accuracy": 0.81,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.19000000000000006
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 3,
+      "accuracy": 0.83,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.20999999999999996
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 0,
+      "accuracy": 0.62,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 1,
+      "accuracy": 0.74,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.12
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 2,
+      "accuracy": 0.73,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.10999999999999999
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 3,
+      "accuracy": 0.74,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.12
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "debate",
+      "round": 0,
+      "accuracy": 0.8,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.18000000000000005
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "debate",
+      "round": 1,
+      "accuracy": 0.77,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.15000000000000002
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "debate",
+      "round": 2,
+      "accuracy": 0.82,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.19999999999999996
+    },
+    {
+      "level": 3,
+      "questions": 100,
+      "method": "debate",
+      "round": 3,
+      "accuracy": 0.81,
+      "single_accuracy": 0.62,
+      "gain_vs_single": 0.19000000000000006
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 0,
+      "accuracy": 0.44,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 1,
+      "accuracy": 0.65,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.21000000000000002
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 2,
+      "accuracy": 0.75,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.31
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 3,
+      "accuracy": 0.67,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.23000000000000004
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 0,
+      "accuracy": 0.44,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 1,
+      "accuracy": 0.64,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.2
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 2,
+      "accuracy": 0.61,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.16999999999999998
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 3,
+      "accuracy": 0.6,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.15999999999999998
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "debate",
+      "round": 0,
+      "accuracy": 0.68,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.24000000000000005
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "debate",
+      "round": 1,
+      "accuracy": 0.67,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.23000000000000004
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "debate",
+      "round": 2,
+      "accuracy": 0.68,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.24000000000000005
+    },
+    {
+      "level": 4,
+      "questions": 100,
+      "method": "debate",
+      "round": 3,
+      "accuracy": 0.65,
+      "single_accuracy": 0.44,
+      "gain_vs_single": 0.21000000000000002
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 0,
+      "accuracy": 0.33,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 1,
+      "accuracy": 0.49,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.15999999999999998
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 2,
+      "accuracy": 0.51,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.18
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "self_refine",
+      "round": 3,
+      "accuracy": 0.5,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.16999999999999998
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 0,
+      "accuracy": 0.33,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.0
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 1,
+      "accuracy": 0.43,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.09999999999999998
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 2,
+      "accuracy": 0.49,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.15999999999999998
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "student_critic",
+      "round": 3,
+      "accuracy": 0.42,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.08999999999999997
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "debate",
+      "round": 0,
+      "accuracy": 0.47,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.13999999999999996
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "debate",
+      "round": 1,
+      "accuracy": 0.46,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.13
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "debate",
+      "round": 2,
+      "accuracy": 0.45,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.12
+    },
+    {
+      "level": 5,
+      "questions": 100,
+      "method": "debate",
+      "round": 3,
+      "accuracy": 0.4,
+      "single_accuracy": 0.33,
+      "gain_vs_single": 0.07
+    }
+  ],
+  "measurement_note": "Debate judges are run at every round checkpoint for analysis only. A checkpoint's protocol cost includes only the debate path up to that round plus that round's judge; earlier checkpoint judges do not affect later debate states.",
+  "executed_generation_count": 12000,
+  "debate_checkpoint_judge_overhead_seconds": 182.54659304814413,
+  "repetition_wall_time_seconds": 1116.321857206989
+}

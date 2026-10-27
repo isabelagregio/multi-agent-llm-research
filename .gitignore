@@ -1,0 +1,32 @@
+# Models
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Full datasets / caches
+datasets/
+*.arrow
+.cache/
+huggingface/
+
+# Raw experiment outputs
+results/**/raw_results.jsonl
+
+# Logs
+logs/
+*.out
+*.err
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment / secrets
+.env
+*.pem
+credentials*
+wandb/

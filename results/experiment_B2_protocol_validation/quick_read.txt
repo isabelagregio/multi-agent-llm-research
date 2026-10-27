@@ -1,0 +1,19 @@
+B2 -- PROTOCOL VALIDATION
+============================================================
+Questions: 300 | repetitions: 3
+
+Student-Critic: current vs evidence-gated critic
+  current R1: acc=70.78%, false_rejects=7.7, precision=0.878, recall=0.461, +corr=37.7, -corr=5.0
+  current R2: acc=66.44%, false_rejects=73.3, precision=0.450, recall=0.685, +corr=9.7, -corr=22.7
+  current R3: acc=68.67%, false_rejects=37.0, precision=0.631, recall=0.629, +corr=15.0, -corr=8.3
+  evidence_gated R1: acc=72.44%, false_rejects=8.7, precision=0.828, recall=0.350, +corr=41.3, -corr=3.7
+  evidence_gated R2: acc=69.33%, false_rejects=50.0, precision=0.464, recall=0.523, +corr=7.3, -corr=16.7
+  evidence_gated R3: acc=68.78%, false_rejects=64.7, precision=0.449, recall=0.574, +corr=14.0, -corr=15.7
+
+Debate / Judge ablation
+  no_interaction_judge: acc=76.33%, tokens/q=2110.6, disagreement=42.00%
+  one_interaction_plus_judge: acc=75.67%, tokens/q=3961.2, disagreement=20.67%
+  after interaction without judge: consensus coverage=79.33%, consensus accuracy=93.00%, wrong consensus=7.00%
+
+Decision rule:
+  Do not keep a revised prompt because it performs better once. Keep it only if it consistently reduces the specific failure it was designed to address.

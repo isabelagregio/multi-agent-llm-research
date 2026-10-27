@@ -1,0 +1,258 @@
+{
+  "experiment": "E - Cost-Aware Evaluation",
+  "source_experiment": "D - Adaptive Self-Refine",
+  "rows_from_experiment_D": 1500,
+  "unique_questions": 500,
+  "repetitions": 3,
+  "bootstrap": {
+    "method": "clustered bootstrap by question_id",
+    "samples": 2000,
+    "seed": 20261013
+  },
+  "strategy_summary": [
+    {
+      "strategy": "R0",
+      "accuracy": 0.7353333333333333,
+      "accuracy_ci95_low": 0.6999833333333333,
+      "accuracy_ci95_high": 0.77,
+      "mean_tokens_per_question": 563.0006666666667,
+      "tokens_ci95_low": 543.7928,
+      "tokens_ci95_high": 581.4700166666668,
+      "mean_rounds": 0.0,
+      "rounds_ci95_low": 0.0,
+      "rounds_ci95_high": 0.0,
+      "correct_answers_per_1k_tokens": 1.3060967364159426,
+      "correct_per_1k_ci95_low": 1.2084496128780802,
+      "correct_per_1k_ci95_high": 1.4048823640510535
+    },
+    {
+      "strategy": "R1",
+      "accuracy": 0.782,
+      "accuracy_ci95_low": 0.7493333333333333,
+      "accuracy_ci95_high": 0.8146666666666667,
+      "mean_tokens_per_question": 2695.812,
+      "tokens_ci95_low": 2608.1314333333335,
+      "tokens_ci95_high": 2780.0677833333334,
+      "mean_rounds": 1.0,
+      "rounds_ci95_low": 1.0,
+      "rounds_ci95_high": 1.0,
+      "correct_answers_per_1k_tokens": 0.2900795752819559,
+      "correct_per_1k_ci95_low": 0.2714507923515251,
+      "correct_per_1k_ci95_high": 0.30994351737702414
+    },
+    {
+      "strategy": "R2",
+      "accuracy": 0.7833333333333333,
+      "accuracy_ci95_low": 0.75,
+      "accuracy_ci95_high": 0.816,
+      "mean_tokens_per_question": 4428.040666666667,
+      "tokens_ci95_low": 4281.579766666668,
+      "tokens_ci95_high": 4572.901933333333,
+      "mean_rounds": 2.0,
+      "rounds_ci95_low": 2.0,
+      "rounds_ci95_high": 2.0,
+      "correct_answers_per_1k_tokens": 0.17690292215021813,
+      "correct_per_1k_ci95_low": 0.16506427594361428,
+      "correct_per_1k_ci95_high": 0.18913671403152638
+    },
+    {
+      "strategy": "R3",
+      "accuracy": 0.7833333333333333,
+      "accuracy_ci95_low": 0.7506666666666667,
+      "accuracy_ci95_high": 0.8173333333333334,
+      "mean_tokens_per_question": 6116.108,
+      "tokens_ci95_low": 5912.7230500000005,
+      "tokens_ci95_high": 6315.625533333334,
+      "mean_rounds": 3.0,
+      "rounds_ci95_low": 3.0,
+      "rounds_ci95_high": 3.0,
+      "correct_answers_per_1k_tokens": 0.1280770930358544,
+      "correct_per_1k_ci95_low": 0.11967519117155102,
+      "correct_per_1k_ci95_high": 0.1370435136123091
+    },
+    {
+      "strategy": "Adaptive",
+      "accuracy": 0.7873333333333333,
+      "accuracy_ci95_low": 0.7546666666666667,
+      "accuracy_ci95_high": 0.8206666666666667,
+      "mean_tokens_per_question": 3244.332,
+      "tokens_ci95_low": 3071.4924666666666,
+      "tokens_ci95_high": 3422.943183333333,
+      "mean_rounds": 1.1926666666666668,
+      "rounds_ci95_low": 1.1573333333333333,
+      "rounds_ci95_high": 1.2280166666666665,
+      "correct_answers_per_1k_tokens": 0.24267964355476979,
+      "correct_per_1k_ci95_low": 0.22220943875028,
+      "correct_per_1k_ci95_high": 0.2637748046910014
+    }
+  ],
+  "adaptive_pairwise_comparisons": [
+    {
+      "comparison": "Adaptive - R0",
+      "accuracy_difference": 0.052000000000000046,
+      "accuracy_diff_ci95_low": 0.03733333333333333,
+      "accuracy_diff_ci95_high": 0.06866666666666665,
+      "token_difference": 2681.331333333333,
+      "token_diff_ci95_low": 2520.4607666666666,
+      "token_diff_ci95_high": 2844.200466666666,
+      "token_savings_fraction": -4.762572217202821,
+      "token_savings_ci95_low": -4.942158690641016,
+      "token_savings_ci95_high": -4.581810334977193
+    },
+    {
+      "comparison": "Adaptive - R1",
+      "accuracy_difference": 0.005333333333333301,
+      "accuracy_diff_ci95_low": 0.0006499999999999294,
+      "accuracy_diff_ci95_high": 0.010683333333333286,
+      "token_difference": 548.52,
+      "token_diff_ci95_low": 440.98683333333355,
+      "token_diff_ci95_high": 657.8807333333336,
+      "token_savings_fraction": -0.2034711619356246,
+      "token_savings_ci95_low": -0.2395510221813543,
+      "token_savings_ci95_high": -0.16673089752536016
+    },
+    {
+      "comparison": "Adaptive - R2",
+      "accuracy_difference": 0.0040000000000000036,
+      "accuracy_diff_ci95_low": -0.0019999999999998934,
+      "accuracy_diff_ci95_high": 0.010000000000000009,
+      "token_difference": -1183.7086666666669,
+      "token_diff_ci95_low": -1267.260433333334,
+      "token_diff_ci95_high": -1103.0381333333337,
+      "token_savings_fraction": 0.2673210920526024,
+      "token_savings_ci95_low": 0.24569571686917588,
+      "token_savings_ci95_high": 0.28910806457180566
+    },
+    {
+      "comparison": "Adaptive - R3",
+      "accuracy_difference": 0.0040000000000000036,
+      "accuracy_diff_ci95_low": -0.0033333333333334103,
+      "accuracy_diff_ci95_high": 0.01200000000000001,
+      "token_difference": -2871.7760000000003,
+      "token_diff_ci95_low": -2966.7572833333334,
+      "token_diff_ci95_high": -2772.21085,
+      "token_savings_fraction": 0.4695430492725112,
+      "token_savings_ci95_low": 0.4539191610608905,
+      "token_savings_ci95_high": 0.4854777073432658
+    }
+  ],
+  "pareto_frontier": [
+    {
+      "strategy": "R0",
+      "accuracy": 0.7353333333333333,
+      "mean_tokens_per_question": 563.0006666666667,
+      "mean_rounds": 0.0,
+      "pareto_efficient": true,
+      "dominated_by": ""
+    },
+    {
+      "strategy": "R1",
+      "accuracy": 0.782,
+      "mean_tokens_per_question": 2695.812,
+      "mean_rounds": 1.0,
+      "pareto_efficient": true,
+      "dominated_by": ""
+    },
+    {
+      "strategy": "Adaptive",
+      "accuracy": 0.7873333333333333,
+      "mean_tokens_per_question": 3244.332,
+      "mean_rounds": 1.1926666666666668,
+      "pareto_efficient": true,
+      "dominated_by": ""
+    },
+    {
+      "strategy": "R2",
+      "accuracy": 0.7833333333333333,
+      "mean_tokens_per_question": 4428.040666666667,
+      "mean_rounds": 2.0,
+      "pareto_efficient": false,
+      "dominated_by": "Adaptive"
+    },
+    {
+      "strategy": "R3",
+      "accuracy": 0.7833333333333333,
+      "mean_tokens_per_question": 6116.108,
+      "mean_rounds": 3.0,
+      "pareto_efficient": false,
+      "dominated_by": "R2;Adaptive"
+    }
+  ],
+  "target_accuracy_cost": [
+    {
+      "target_accuracy": 0.735,
+      "cheapest_strategy": "R0",
+      "tokens_per_question": 563.0006666666667,
+      "observed_accuracy": 0.7353333333333333
+    },
+    {
+      "target_accuracy": 0.74,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.745,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.75,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.755,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.76,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.765,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.77,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.775,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.78,
+      "cheapest_strategy": "R1",
+      "tokens_per_question": 2695.812,
+      "observed_accuracy": 0.782
+    },
+    {
+      "target_accuracy": 0.785,
+      "cheapest_strategy": "Adaptive",
+      "tokens_per_question": 3244.332,
+      "observed_accuracy": 0.7873333333333333
+    },
+    {
+      "target_accuracy": 0.79,
+      "cheapest_strategy": "",
+      "tokens_per_question": "",
+      "observed_accuracy": ""
+    }
+  ],
+  "runtime_validation_available": false,
+  "runtime_validation": [],
+  "important_note": "Adaptive token counts come from the paired Experiment D full-R3 trajectories and represent counterfactual consumed tokens under early stopping. Actual latency is reported only when Experiment D runtime_validation_rep_*.json files are present."
+}

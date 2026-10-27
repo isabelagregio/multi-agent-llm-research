@@ -1,0 +1,657 @@
+{
+  "experiment": "B2 - Protocol Validation",
+  "goal": "Test whether harmful Student-Critic and Debate patterns are caused by protocol design rather than adding a new architecture.",
+  "questions": 300,
+  "repetitions": 3,
+  "source_questions": "Balanced subset of questions already used in Experiment B / Experiment 7",
+  "single_accuracy": {
+    "mean": 0.5988888888888889,
+    "std_population": 0.009558139185602912,
+    "values": [
+      0.5866666666666667,
+      0.6,
+      0.61
+    ]
+  },
+  "student_critic": [
+    {
+      "variant": "current",
+      "round": 1,
+      "accuracy": {
+        "mean": 0.7077777777777778,
+        "std_population": 0.0062853936105470775,
+        "values": [
+          0.7033333333333334,
+          0.7033333333333334,
+          0.7166666666666667
+        ]
+      },
+      "false_rejects": {
+        "mean": 7.666666666666667,
+        "std_population": 0.4714045207910317,
+        "values": [
+          8,
+          8,
+          7
+        ]
+      },
+      "precision": {
+        "mean": 0.8777189322206174,
+        "std_population": 0.012710811460528987,
+        "values": [
+          0.8666666666666667,
+          0.8709677419354839,
+          0.8955223880597015
+        ]
+      },
+      "recall": {
+        "mean": 0.4607251171767301,
+        "std_population": 0.03890354879347265,
+        "values": [
+          0.41935483870967744,
+          0.45,
+          0.5128205128205128
+        ]
+      },
+      "f1": {
+        "mean": 0.6035992992514732,
+        "std_population": 0.03622409518145027,
+        "values": [
+          0.5652173913043478,
+          0.5934065934065934,
+          0.6521739130434783
+        ]
+      },
+      "positive_corrections": {
+        "mean": 37.666666666666664,
+        "std_population": 0.4714045207910317,
+        "values": [
+          38,
+          38,
+          37
+        ]
+      },
+      "negative_corrections": {
+        "mean": 5,
+        "std_population": 1.632993161855452,
+        "values": [
+          3,
+          7,
+          5
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 1971.7311111111112,
+        "std_population": 2.5156316242915553,
+        "values": [
+          1972.99,
+          1973.9833333333333,
+          1968.22
+        ]
+      }
+    },
+    {
+      "variant": "current",
+      "round": 2,
+      "accuracy": {
+        "mean": 0.6644444444444444,
+        "std_population": 0.020427529234278013,
+        "values": [
+          0.64,
+          0.69,
+          0.6633333333333333
+        ]
+      },
+      "false_rejects": {
+        "mean": 73.33333333333333,
+        "std_population": 5.2493385826745405,
+        "values": [
+          78,
+          66,
+          76
+        ]
+      },
+      "precision": {
+        "mean": 0.450179077517207,
+        "std_population": 0.008081499960388726,
+        "values": [
+          0.43884892086330934,
+          0.45454545454545453,
+          0.45714285714285713
+        ]
+      },
+      "recall": {
+        "mean": 0.685437320995814,
+        "std_population": 0.0550986875354264,
+        "values": [
+          0.6853932584269663,
+          0.6179775280898876,
+          0.7529411764705882
+        ]
+      },
+      "f1": {
+        "mean": 0.5425953773322194,
+        "std_population": 0.01915395495898067,
+        "values": [
+          0.5350877192982456,
+          0.5238095238095237,
+          0.5688888888888889
+        ]
+      },
+      "positive_corrections": {
+        "mean": 9.666666666666666,
+        "std_population": 2.3570226039551585,
+        "values": [
+          8,
+          13,
+          8
+        ]
+      },
+      "negative_corrections": {
+        "mean": 22.666666666666668,
+        "std_population": 4.189935029992178,
+        "values": [
+          27,
+          17,
+          24
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 3028.2866666666664,
+        "std_population": 7.1410508615614345,
+        "values": [
+          3035.713333333333,
+          3030.5,
+          3018.6466666666665
+        ]
+      }
+    },
+    {
+      "variant": "current",
+      "round": 3,
+      "accuracy": {
+        "mean": 0.6866666666666666,
+        "std_population": 0.012472191289246433,
+        "values": [
+          0.67,
+          0.7,
+          0.69
+        ]
+      },
+      "false_rejects": {
+        "mean": 37,
+        "std_population": 0.0,
+        "values": [
+          37,
+          37,
+          37
+        ]
+      },
+      "precision": {
+        "mean": 0.630734126984127,
+        "std_population": 0.013496760386933702,
+        "values": [
+          0.6476190476190476,
+          0.6145833333333334,
+          0.63
+        ]
+      },
+      "recall": {
+        "mean": 0.6292668693392637,
+        "std_population": 0.004353866313856338,
+        "values": [
+          0.6296296296296297,
+          0.6344086021505376,
+          0.6237623762376238
+        ]
+      },
+      "f1": {
+        "mean": 0.6299006495208583,
+        "std_population": 0.006165919139113422,
+        "values": [
+          0.6384976525821596,
+          0.6243386243386244,
+          0.6268656716417911
+        ]
+      },
+      "positive_corrections": {
+        "mean": 15,
+        "std_population": 0.816496580927726,
+        "values": [
+          16,
+          14,
+          15
+        ]
+      },
+      "negative_corrections": {
+        "mean": 8.333333333333334,
+        "std_population": 1.8856180831641267,
+        "values": [
+          7,
+          11,
+          7
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 4126.173333333333,
+        "std_population": 28.148167231962404,
+        "values": [
+          4159.3,
+          4090.4933333333333,
+          4128.7266666666665
+        ]
+      }
+    },
+    {
+      "variant": "evidence_gated",
+      "round": 1,
+      "accuracy": {
+        "mean": 0.7244444444444444,
+        "std_population": 0.01030402055055078,
+        "values": [
+          0.73,
+          0.71,
+          0.7333333333333333
+        ]
+      },
+      "false_rejects": {
+        "mean": 8.666666666666666,
+        "std_population": 0.4714045207910317,
+        "values": [
+          8,
+          9,
+          9
+        ]
+      },
+      "precision": {
+        "mean": 0.8277921130137879,
+        "std_population": 0.012284008712545279,
+        "values": [
+          0.8222222222222222,
+          0.8163265306122449,
+          0.8448275862068966
+        ]
+      },
+      "recall": {
+        "mean": 0.35017461630364854,
+        "std_population": 0.05058157939952839,
+        "values": [
+          0.29838709677419356,
+          0.3333333333333333,
+          0.4188034188034188
+        ]
+      },
+      "f1": {
+        "mean": 0.49041420118343193,
+        "std_population": 0.05129491569792667,
+        "values": [
+          0.4378698224852071,
+          0.47337278106508873,
+          0.5599999999999999
+        ]
+      },
+      "positive_corrections": {
+        "mean": 41.333333333333336,
+        "std_population": 4.4969125210773475,
+        "values": [
+          47,
+          36,
+          41
+        ]
+      },
+      "negative_corrections": {
+        "mean": 3.6666666666666665,
+        "std_population": 0.4714045207910317,
+        "values": [
+          4,
+          3,
+          4
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 2046.3066666666666,
+        "std_population": 9.108509249089076,
+        "values": [
+          2039.5666666666666,
+          2040.17,
+          2059.1833333333334
+        ]
+      }
+    },
+    {
+      "variant": "evidence_gated",
+      "round": 2,
+      "accuracy": {
+        "mean": 0.6933333333333334,
+        "std_population": 0.011863420280034773,
+        "values": [
+          0.6833333333333333,
+          0.6866666666666666,
+          0.71
+        ]
+      },
+      "false_rejects": {
+        "mean": 50,
+        "std_population": 2.943920288775949,
+        "values": [
+          54,
+          49,
+          47
+        ]
+      },
+      "precision": {
+        "mean": 0.4638136686009026,
+        "std_population": 0.03043755378738699,
+        "values": [
+          0.425531914893617,
+          0.5,
+          0.4659090909090909
+        ]
+      },
+      "recall": {
+        "mean": 0.5231818504328083,
+        "std_population": 0.0293185056180366,
+        "values": [
+          0.49382716049382713,
+          0.5632183908045977,
+          0.5125
+        ]
+      },
+      "f1": {
+        "mean": 0.4916559416559417,
+        "std_population": 0.02974023621707496,
+        "values": [
+          0.45714285714285713,
+          0.5297297297297298,
+          0.4880952380952381
+        ]
+      },
+      "positive_corrections": {
+        "mean": 7.333333333333333,
+        "std_population": 1.247219128924647,
+        "values": [
+          7,
+          9,
+          6
+        ]
+      },
+      "negative_corrections": {
+        "mean": 16.666666666666668,
+        "std_population": 3.2998316455372216,
+        "values": [
+          21,
+          16,
+          13
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 3056.6355555555556,
+        "std_population": 10.340917049860678,
+        "values": [
+          3043.2033333333334,
+          3058.3433333333332,
+          3068.36
+        ]
+      }
+    },
+    {
+      "variant": "evidence_gated",
+      "round": 3,
+      "accuracy": {
+        "mean": 0.6877777777777778,
+        "std_population": 0.012862041003100221,
+        "values": [
+          0.67,
+          0.7,
+          0.6933333333333334
+        ]
+      },
+      "false_rejects": {
+        "mean": 64.66666666666667,
+        "std_population": 4.642796092394707,
+        "values": [
+          63,
+          60,
+          71
+        ]
+      },
+      "precision": {
+        "mean": 0.4493860335033739,
+        "std_population": 0.02132302173535413,
+        "values": [
+          0.4424778761061947,
+          0.4782608695652174,
+          0.4274193548387097
+        ]
+      },
+      "recall": {
+        "mean": 0.5735391915837528,
+        "std_population": 0.03481003201270467,
+        "values": [
+          0.5263157894736842,
+          0.5851063829787234,
+          0.6091954022988506
+        ]
+      },
+      "f1": {
+        "mean": 0.5031515628297869,
+        "std_population": 0.018602522621213705,
+        "values": [
+          0.4807692307692308,
+          0.5263157894736843,
+          0.5023696682464455
+        ]
+      },
+      "positive_corrections": {
+        "mean": 14,
+        "std_population": 2.943920288775949,
+        "values": [
+          11,
+          18,
+          13
+        ]
+      },
+      "negative_corrections": {
+        "mean": 15.666666666666666,
+        "std_population": 1.699673171197595,
+        "values": [
+          15,
+          14,
+          18
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 4109.0233333333335,
+        "std_population": 25.35272547259736,
+        "values": [
+          4077.86,
+          4109.25,
+          4139.96
+        ]
+      }
+    }
+  ],
+  "debate": {
+    "no_interaction_judge": {
+      "accuracy": {
+        "mean": 0.7633333333333333,
+        "std_population": 0.007200822998230985,
+        "values": [
+          0.7533333333333333,
+          0.77,
+          0.7666666666666667
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 2110.5555555555557,
+        "std_population": 3.4957437965844,
+        "values": [
+          2107.8766666666666,
+          2115.4933333333333,
+          2108.2966666666666
+        ]
+      },
+      "disagreement_rate": {
+        "mean": 0.42,
+        "std_population": 0.008164965809277268,
+        "values": [
+          0.43,
+          0.41,
+          0.42
+        ]
+      },
+      "judge_correct_when_exactly_one_agent_correct": {
+        "mean": 0.6759791921664626,
+        "std_population": 0.05123306209202794,
+        "values": [
+          0.6976744186046512,
+          0.725,
+          0.6052631578947368
+        ]
+      },
+      "judge_error_when_both_agents_correct": {
+        "mean": 0.0,
+        "std_population": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "judge_rescue_when_both_agents_wrong": {
+        "mean": 0.4021005862568532,
+        "std_population": 0.021962721955606068,
+        "values": [
+          0.3838383838383838,
+          0.3894736842105263,
+          0.4329896907216495
+        ]
+      }
+    },
+    "one_interaction_plus_judge": {
+      "accuracy": {
+        "mean": 0.7566666666666667,
+        "std_population": 0.01360827634879543,
+        "values": [
+          0.74,
+          0.7733333333333333,
+          0.7566666666666667
+        ]
+      },
+      "mean_tokens_per_question": {
+        "mean": 3961.2366666666667,
+        "std_population": 0.7670482142363227,
+        "values": [
+          3960.153333333333,
+          3961.826666666667,
+          3961.73
+        ]
+      },
+      "disagreement_rate": {
+        "mean": 0.20666666666666667,
+        "std_population": 0.015153535218873167,
+        "values": [
+          0.22666666666666666,
+          0.20333333333333334,
+          0.19
+        ]
+      },
+      "judge_correct_when_exactly_one_agent_correct": {
+        "mean": 0.4748677248677249,
+        "std_population": 0.06252011797934641,
+        "values": [
+          0.5357142857142857,
+          0.5,
+          0.3888888888888889
+        ]
+      },
+      "judge_error_when_both_agents_correct": {
+        "mean": 0.0362039989502165,
+        "std_population": 0.011513938462804369,
+        "values": [
+          0.05069124423963134,
+          0.022522522522522515,
+          0.03539823008849563
+        ]
+      },
+      "judge_rescue_when_both_agents_wrong": {
+        "mean": 0.046701000149276015,
+        "std_population": 0.028837287694522408,
+        "values": [
+          0.01818181818181818,
+          0.08620689655172414,
+          0.03571428571428571
+        ]
+      }
+    },
+    "interaction_without_judge_diagnostic": {
+      "consensus_coverage": {
+        "mean": 0.7933333333333333,
+        "std_population": 0.015153535218873198,
+        "values": [
+          0.7733333333333333,
+          0.7966666666666666,
+          0.81
+        ]
+      },
+      "consensus_accuracy": {
+        "mean": 0.9300240574394002,
+        "std_population": 0.004351386355115101,
+        "values": [
+          0.9353448275862069,
+          0.9246861924686193,
+          0.9300411522633745
+        ]
+      },
+      "wrong_consensus_rate": {
+        "mean": 0.06997594256059979,
+        "std_population": 0.00435138635511513,
+        "values": [
+          0.06465517241379311,
+          0.07531380753138076,
+          0.06995884773662552
+        ]
+      },
+      "agent_a_accuracy": {
+        "mean": 0.7688888888888888,
+        "std_population": 0.010999438818457398,
+        "values": [
+          0.7766666666666666,
+          0.7533333333333333,
+          0.7766666666666666
+        ]
+      },
+      "agent_b_accuracy": {
+        "mean": 0.7822222222222223,
+        "std_population": 0.01342560663732732,
+        "values": [
+          0.7633333333333333,
+          0.7933333333333333,
+          0.79
+        ]
+      },
+      "disagreement_before": {
+        "mean": 0.42,
+        "std_population": 0.008164965809277268,
+        "values": [
+          0.43,
+          0.41,
+          0.42
+        ]
+      },
+      "disagreement_after": {
+        "mean": 0.20666666666666667,
+        "std_population": 0.015153535218873167,
+        "values": [
+          0.22666666666666666,
+          0.20333333333333334,
+          0.19
+        ]
+      }
+    }
+  },
+  "interpretation_rule": {
+    "student_critic": "Adopt the evidence-gated variant only if it reduces false rejects / harmful corrections without materially reducing useful corrections or accuracy.",
+    "debate": "Use the ablation to separate gains from peer interaction from gains due to the final judge. Increased consensus alone is not treated as improvement."
+  }
+}

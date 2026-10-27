@@ -1,0 +1,438 @@
+{
+  "experiment": "F - Risk and Failure Propagation Analysis",
+  "research_question": "When does LLM interaction correct individual errors, and when does it propagate or amplify them into collective failures?",
+  "source_B_raw": "/lustre06/project/6087921/isa1909/results/experiment_7_round_scaling_difficulty/raw_results.jsonl",
+  "source_D_raw": "/lustre06/project/6087921/isa1909/results/experiment_D_adaptive_stopping/raw_results.jsonl",
+  "B_rows": 1500,
+  "D_rows": 1500,
+  "unique_questions_B": 500,
+  "repetitions_B": 3,
+  "self_refine": [
+    {
+      "method": "self_refine",
+      "round": 1,
+      "n": 1500,
+      "correct_before": 915,
+      "wrong_before": 585,
+      "harmful_count": 9,
+      "harmful_rate_given_correct": 0.009836065573770493,
+      "harmful_ci95_low": 0.004287245444801715,
+      "harmful_ci95_high": 0.017297765297765295,
+      "beneficial_count": 223,
+      "beneficial_rate_given_wrong": 0.3811965811965812,
+      "beneficial_ci95_low": 0.3289875441817315,
+      "beneficial_ci95_high": 0.4340030405405405,
+      "net_corrections": 214
+    },
+    {
+      "method": "self_refine",
+      "round": 2,
+      "n": 1500,
+      "correct_before": 1129,
+      "wrong_before": 371,
+      "harmful_count": 56,
+      "harmful_rate_given_correct": 0.049601417183348095,
+      "harmful_ci95_low": 0.03795233892321271,
+      "harmful_ci95_high": 0.06356350172424027,
+      "beneficial_count": 72,
+      "beneficial_rate_given_wrong": 0.1940700808625337,
+      "beneficial_ci95_low": 0.1517596145062574,
+      "beneficial_ci95_high": 0.2387671660424469,
+      "net_corrections": 16
+    },
+    {
+      "method": "self_refine",
+      "round": 3,
+      "n": 1500,
+      "correct_before": 1145,
+      "wrong_before": 355,
+      "harmful_count": 64,
+      "harmful_rate_given_correct": 0.05589519650655022,
+      "harmful_ci95_low": 0.041342961161875635,
+      "harmful_ci95_high": 0.07099002480607709,
+      "beneficial_count": 54,
+      "beneficial_rate_given_wrong": 0.15211267605633802,
+      "beneficial_ci95_low": 0.11055688831279381,
+      "beneficial_ci95_high": 0.19489878694089452,
+      "net_corrections": -10
+    }
+  ],
+  "student_critic_transitions": [
+    {
+      "method": "student_critic",
+      "round": 1,
+      "n": 1500,
+      "correct_before": 915,
+      "wrong_before": 585,
+      "harmful_count": 17,
+      "harmful_rate_given_correct": 0.018579234972677595,
+      "harmful_ci95_low": 0.010010845383759733,
+      "harmful_ci95_high": 0.028452556984627394,
+      "beneficial_count": 169,
+      "beneficial_rate_given_wrong": 0.28888888888888886,
+      "beneficial_ci95_low": 0.2415431354469584,
+      "beneficial_ci95_high": 0.3367003367003367,
+      "net_corrections": 152
+    },
+    {
+      "method": "student_critic",
+      "round": 2,
+      "n": 1500,
+      "correct_before": 1067,
+      "wrong_before": 433,
+      "harmful_count": 99,
+      "harmful_rate_given_correct": 0.09278350515463918,
+      "harmful_ci95_low": 0.07299056547990565,
+      "harmful_ci95_high": 0.11475448390728375,
+      "beneficial_count": 61,
+      "beneficial_rate_given_wrong": 0.14087759815242495,
+      "beneficial_ci95_low": 0.10628670752670569,
+      "beneficial_ci95_high": 0.17924647417571946,
+      "net_corrections": -38
+    },
+    {
+      "method": "student_critic",
+      "round": 3,
+      "n": 1500,
+      "correct_before": 1029,
+      "wrong_before": 471,
+      "harmful_count": 58,
+      "harmful_rate_given_correct": 0.056365403304178816,
+      "harmful_ci95_low": 0.04182065668280043,
+      "harmful_ci95_high": 0.07218531666585747,
+      "beneficial_count": 63,
+      "beneficial_rate_given_wrong": 0.1337579617834395,
+      "beneficial_ci95_low": 0.10212655141843971,
+      "beneficial_ci95_high": 0.16666666666666666,
+      "net_corrections": 5
+    }
+  ],
+  "student_critic_critic_risk": [
+    {
+      "round": 1,
+      "n": 1500,
+      "reject_count": 317,
+      "false_reject_count": 39,
+      "false_reject_rate_given_correct": 0.04262295081967213,
+      "false_reject_ci95_low": 0.02664766222439543,
+      "false_reject_ci95_high": 0.06126967600762335,
+      "harmful_reject_count": 10,
+      "harmful_given_false_reject_rate": 0.2564102564102564,
+      "false_accept_count": 307,
+      "false_accept_rate_given_wrong": 0.5247863247863248,
+      "useful_reject_correction_count": 57,
+      "useful_reject_precision": 0.17981072555205047
+    },
+    {
+      "round": 2,
+      "n": 1500,
+      "reject_count": 677,
+      "false_reject_count": 356,
+      "false_reject_rate_given_correct": 0.3336457357075914,
+      "false_reject_ci95_low": 0.2987209454336288,
+      "false_reject_ci95_high": 0.368861400658815,
+      "harmful_reject_count": 87,
+      "harmful_given_false_reject_rate": 0.2443820224719101,
+      "false_accept_count": 112,
+      "false_accept_rate_given_wrong": 0.2586605080831409,
+      "useful_reject_correction_count": 53,
+      "useful_reject_precision": 0.07828655834564253
+    },
+    {
+      "round": 3,
+      "n": 1500,
+      "reject_count": 524,
+      "false_reject_count": 222,
+      "false_reject_rate_given_correct": 0.21574344023323616,
+      "false_reject_ci95_low": 0.18766920659795794,
+      "false_reject_ci95_high": 0.2426708335319406,
+      "harmful_reject_count": 53,
+      "harmful_given_false_reject_rate": 0.23873873873873874,
+      "false_accept_count": 169,
+      "false_accept_rate_given_wrong": 0.35881104033970274,
+      "useful_reject_correction_count": 36,
+      "useful_reject_precision": 0.06870229007633588
+    }
+  ],
+  "debate": [
+    {
+      "analysis": "interaction",
+      "round": 1,
+      "n": 1500,
+      "one_correct_before_count": 222,
+      "correct_agent_contamination_count": 23,
+      "correct_agent_contamination_rate": 0.1036036036036036,
+      "contamination_ci95_low": 0.06578792933036817,
+      "contamination_ci95_high": 0.14602579322253398,
+      "corrective_convergence_count": 143,
+      "corrective_convergence_rate": 0.6441441441441441,
+      "new_consensus_count": 326,
+      "harmful_consensus_count": 79,
+      "harmful_consensus_rate": 0.24233128834355827,
+      "beneficial_consensus_count": 247
+    },
+    {
+      "analysis": "interaction",
+      "round": 2,
+      "n": 1500,
+      "one_correct_before_count": 142,
+      "correct_agent_contamination_count": 31,
+      "correct_agent_contamination_rate": 0.21830985915492956,
+      "contamination_ci95_low": 0.15067720671541868,
+      "contamination_ci95_high": 0.28847656249999987,
+      "corrective_convergence_count": 51,
+      "corrective_convergence_rate": 0.3591549295774648,
+      "new_consensus_count": 128,
+      "harmful_consensus_count": 66,
+      "harmful_consensus_rate": 0.515625,
+      "beneficial_consensus_count": 62
+    },
+    {
+      "analysis": "interaction",
+      "round": 3,
+      "n": 1500,
+      "one_correct_before_count": 95,
+      "correct_agent_contamination_count": 14,
+      "correct_agent_contamination_rate": 0.14736842105263157,
+      "contamination_ci95_low": 0.07476635514018691,
+      "contamination_ci95_high": 0.22989014342386327,
+      "corrective_convergence_count": 22,
+      "corrective_convergence_rate": 0.23157894736842105,
+      "new_consensus_count": 80,
+      "harmful_consensus_count": 54,
+      "harmful_consensus_rate": 0.675,
+      "beneficial_consensus_count": 26
+    },
+    {
+      "analysis": "judge",
+      "round": 0,
+      "n": 1500,
+      "one_correct_count": 222,
+      "judge_error_one_correct_count": 68,
+      "judge_error_one_correct_rate": 0.3063063063063063,
+      "both_correct_count": 806,
+      "judge_error_both_correct_count": 1,
+      "judge_error_both_correct_rate": 0.0012406947890818859,
+      "both_wrong_count": 472,
+      "judge_rescue_both_wrong_count": 156,
+      "judge_rescue_both_wrong_rate": 0.3305084745762712
+    },
+    {
+      "analysis": "judge",
+      "round": 1,
+      "n": 1500,
+      "one_correct_count": 142,
+      "judge_error_one_correct_count": 71,
+      "judge_error_one_correct_rate": 0.5,
+      "both_correct_count": 1061,
+      "judge_error_both_correct_count": 39,
+      "judge_error_both_correct_rate": 0.036757775683317624,
+      "both_wrong_count": 297,
+      "judge_rescue_both_wrong_count": 22,
+      "judge_rescue_both_wrong_rate": 0.07407407407407407
+    },
+    {
+      "analysis": "judge",
+      "round": 2,
+      "n": 1500,
+      "one_correct_count": 95,
+      "judge_error_one_correct_count": 54,
+      "judge_error_one_correct_rate": 0.5684210526315789,
+      "both_correct_count": 1102,
+      "judge_error_both_correct_count": 43,
+      "judge_error_both_correct_rate": 0.03901996370235935,
+      "both_wrong_count": 303,
+      "judge_rescue_both_wrong_count": 17,
+      "judge_rescue_both_wrong_rate": 0.056105610561056105
+    },
+    {
+      "analysis": "judge",
+      "round": 3,
+      "n": 1500,
+      "one_correct_count": 75,
+      "judge_error_one_correct_count": 45,
+      "judge_error_one_correct_rate": 0.6,
+      "both_correct_count": 1121,
+      "judge_error_both_correct_count": 59,
+      "judge_error_both_correct_rate": 0.05263157894736842,
+      "both_wrong_count": 304,
+      "judge_rescue_both_wrong_count": 9,
+      "judge_rescue_both_wrong_rate": 0.029605263157894735
+    }
+  ],
+  "adaptive": [
+    {
+      "level": "all",
+      "n": 1500,
+      "stopped_before_r3_rate": 0.958,
+      "premature_stop_count": 14,
+      "premature_stop_rate": 0.009333333333333334,
+      "avoided_later_degradation_count": 19,
+      "avoided_later_degradation_rate": 0.012666666666666666,
+      "risk_benefit_balance_count": 5
+    },
+    {
+      "level": 1,
+      "n": 300,
+      "stopped_before_r3_rate": 1.0,
+      "premature_stop_count": 0,
+      "premature_stop_rate": 0.0,
+      "avoided_later_degradation_count": 2,
+      "avoided_later_degradation_rate": 0.006666666666666667,
+      "risk_benefit_balance_count": 2
+    },
+    {
+      "level": 2,
+      "n": 300,
+      "stopped_before_r3_rate": 0.9833333333333333,
+      "premature_stop_count": 1,
+      "premature_stop_rate": 0.0033333333333333335,
+      "avoided_later_degradation_count": 5,
+      "avoided_later_degradation_rate": 0.016666666666666666,
+      "risk_benefit_balance_count": 4
+    },
+    {
+      "level": 3,
+      "n": 300,
+      "stopped_before_r3_rate": 0.9766666666666667,
+      "premature_stop_count": 3,
+      "premature_stop_rate": 0.01,
+      "avoided_later_degradation_count": 4,
+      "avoided_later_degradation_rate": 0.013333333333333334,
+      "risk_benefit_balance_count": 1
+    },
+    {
+      "level": 4,
+      "n": 300,
+      "stopped_before_r3_rate": 0.9133333333333333,
+      "premature_stop_count": 7,
+      "premature_stop_rate": 0.023333333333333334,
+      "avoided_later_degradation_count": 5,
+      "avoided_later_degradation_rate": 0.016666666666666666,
+      "risk_benefit_balance_count": -2
+    },
+    {
+      "level": 5,
+      "n": 300,
+      "stopped_before_r3_rate": 0.9166666666666666,
+      "premature_stop_count": 3,
+      "premature_stop_rate": 0.01,
+      "avoided_later_degradation_count": 3,
+      "avoided_later_degradation_rate": 0.01,
+      "risk_benefit_balance_count": 0
+    }
+  ],
+  "risk_by_difficulty": [
+    {
+      "level": 1,
+      "method": "self_refine",
+      "harmful_rate_given_correct": 0.007352941176470588,
+      "beneficial_rate_given_wrong": 0.25,
+      "n": 900
+    },
+    {
+      "level": 1,
+      "method": "student_critic",
+      "harmful_rate_given_correct": 0.01990049751243781,
+      "beneficial_rate_given_wrong": 0.20833333333333334,
+      "n": 900
+    },
+    {
+      "level": 1,
+      "method": "debate",
+      "correct_agent_contamination_rate": 0.23076923076923078,
+      "harmful_consensus_rate": 0.4418604651162791,
+      "n": 900
+    },
+    {
+      "level": 2,
+      "method": "self_refine",
+      "harmful_rate_given_correct": 0.025333333333333333,
+      "beneficial_rate_given_wrong": 0.26666666666666666,
+      "n": 900
+    },
+    {
+      "level": 2,
+      "method": "student_critic",
+      "harmful_rate_given_correct": 0.03961748633879782,
+      "beneficial_rate_given_wrong": 0.22023809523809523,
+      "n": 900
+    },
+    {
+      "level": 2,
+      "method": "debate",
+      "correct_agent_contamination_rate": 0.18461538461538463,
+      "harmful_consensus_rate": 0.30158730158730157,
+      "n": 900
+    },
+    {
+      "level": 3,
+      "method": "self_refine",
+      "harmful_rate_given_correct": 0.03545051698670606,
+      "beneficial_rate_given_wrong": 0.37668161434977576,
+      "n": 900
+    },
+    {
+      "level": 3,
+      "method": "student_critic",
+      "harmful_rate_given_correct": 0.0449438202247191,
+      "beneficial_rate_given_wrong": 0.23826714801444043,
+      "n": 900
+    },
+    {
+      "level": 3,
+      "method": "debate",
+      "correct_agent_contamination_rate": 0.1111111111111111,
+      "harmful_consensus_rate": 0.2457627118644068,
+      "n": 900
+    },
+    {
+      "level": 4,
+      "method": "self_refine",
+      "harmful_rate_given_correct": 0.05745062836624776,
+      "beneficial_rate_given_wrong": 0.29737609329446063,
+      "n": 900
+    },
+    {
+      "level": 4,
+      "method": "student_critic",
+      "harmful_rate_given_correct": 0.09940357852882704,
+      "beneficial_rate_given_wrong": 0.22670025188916876,
+      "n": 900
+    },
+    {
+      "level": 4,
+      "method": "debate",
+      "correct_agent_contamination_rate": 0.11538461538461539,
+      "harmful_consensus_rate": 0.2847222222222222,
+      "n": 900
+    },
+    {
+      "level": 5,
+      "method": "self_refine",
+      "harmful_rate_given_correct": 0.12339331619537275,
+      "beneficial_rate_given_wrong": 0.19960861056751467,
+      "n": 900
+    },
+    {
+      "level": 5,
+      "method": "student_critic",
+      "harmful_rate_given_correct": 0.14613180515759314,
+      "beneficial_rate_given_wrong": 0.14519056261343014,
+      "n": 900
+    },
+    {
+      "level": 5,
+      "method": "debate",
+      "correct_agent_contamination_rate": 0.17094017094017094,
+      "harmful_consensus_rate": 0.5481927710843374,
+      "n": 900
+    }
+  ],
+  "definitions": {
+    "correct_agent_contamination": "Exactly one debate agent is correct before interaction and both are wrong after.",
+    "harmful_consensus": "Agents disagree before interaction and agree on a wrong answer after.",
+    "false_reject": "Critic says REJECT although the Student was already correct.",
+    "premature_stop": "Adaptive stopping ends wrong even though a later fixed checkpoint becomes correct."
+  }
+}

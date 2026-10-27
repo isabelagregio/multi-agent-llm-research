@@ -1,0 +1,19 @@
+EXPERIMENT F — RISK AND FAILURE PROPAGATION
+
+SELF-REFINE
+R1: harm=0.98% help=38.12% net=+214
+R2: harm=4.96% help=19.41% net=+16
+R3: harm=5.59% help=15.21% net=-10
+
+STUDENT-CRITIC
+R1: false-reject=4.26% harm|false-reject=25.64%
+R2: false-reject=33.36% harm|false-reject=24.44%
+R3: false-reject=21.57% harm|false-reject=23.87%
+
+DEBATE
+R1: contamination=10.36% corrective-convergence=64.41% harmful-consensus=24.23%
+R2: contamination=21.83% corrective-convergence=35.92% harmful-consensus=51.56%
+R3: contamination=14.74% corrective-convergence=23.16% harmful-consensus=67.50%
+
+ADAPTIVE
+premature-stop=0.93% avoided-degradation=1.27% balance=+5

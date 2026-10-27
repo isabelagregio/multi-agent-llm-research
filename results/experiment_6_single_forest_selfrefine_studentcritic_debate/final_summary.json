@@ -1,0 +1,49 @@
+{
+  "single_accuracy": {
+    "values": [
+      0.53,
+      0.525,
+      0.53
+    ],
+    "mean": 0.5283333333333333,
+    "std_population": 0.0023570226039551605
+  },
+  "forest_accuracy": {
+    "values": [
+      0.6,
+      0.585,
+      0.59
+    ],
+    "mean": 0.5916666666666667,
+    "std_population": 0.006236095644623242
+  },
+  "self_refine_accuracy": {
+    "values": [
+      0.74,
+      0.715,
+      0.705
+    ],
+    "mean": 0.72,
+    "std_population": 0.014719601443879758
+  },
+  "student_critic_accuracy": {
+    "values": [
+      0.595,
+      0.655,
+      0.64
+    ],
+    "mean": 0.63,
+    "std_population": 0.025495097567963948
+  },
+  "debate_accuracy": {
+    "values": [
+      0.74,
+      0.72,
+      0.735
+    ],
+    "mean": 0.7316666666666667,
+    "std_population": 0.008498365855987983
+  },
+  "total_experiment_wall_time_seconds": 2874.3398878388107,
+  "mean_repetition_wall_time_seconds": 400.52652914108086
+}

@@ -1,0 +1,28 @@
+EXPERIMENT D - ADAPTIVE SELF-REFINE
+
+Fixed-round baselines:
+  R0: accuracy=73.53% | tokens/q=563.0
+  R1: accuracy=78.20% | tokens/q=2695.8
+  R2: accuracy=78.33% | tokens/q=4428.0
+  R3: accuracy=78.33% | tokens/q=6116.1
+
+Adaptive stopping:
+  accuracy=78.73%
+  mean rounds=1.193
+  tokens/q=3244.3
+  token savings vs R2=26.73%
+  token savings vs R3=46.95%
+  premature-stop rate=0.93%
+  avoided-later-degradation rate=1.27%
+
+Mean stopping distribution:
+  stop at R1: 84.93%
+  stop at R2: 10.87%
+  stop at R3: 4.20%
+
+Adaptive mean rounds by MATH level:
+  Level 1: rounds=1.003 | accuracy=96.00% | tokens/q=1814.7
+  Level 2: rounds=1.100 | accuracy=87.00% | tokens/q=2600.2
+  Level 3: rounds=1.127 | accuracy=87.67% | tokens/q=3043.7
+  Level 4: rounds=1.310 | accuracy=72.00% | tokens/q=4029.1
+  Level 5: rounds=1.423 | accuracy=51.00% | tokens/q=4734.0

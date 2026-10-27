@@ -1,0 +1,82 @@
+#!/bin/bash
+
+#SBATCH --job-name=llama2_agent_forest
+#SBATCH --account=def-sigmagao
+#SBATCH --time=00:15:00
+#SBATCH --gres=gpu:a100:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
+
+#SBATCH --output=results/llama2_agent_forest_%j.out
+#SBATCH --error=results/llama2_agent_forest_%j.err
+
+module load python/3.11.5
+module load cuda/12.9
+module load opencv/4.14.0
+
+source ~/envs/multiagent/bin/activate
+
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export VLLM_WORKER_MULTIPROC_METHOD=spawn
+
+mkdir -p results
+
+echo "=========================================="
+echo "=== Llama2-13B Agent Forest / GSM8K ==="
+echo "=========================================="
+
+echo
+echo "Node:"
+hostname
+
+echo
+echo "GPU:"
+nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
+
+echo
+echo "CUDA_VISIBLE_DEVICES:"
+echo "$CUDA_VISIBLE_DEVICES"
+
+echo
+echo "nvcc:"
+which nvcc
+nvcc --version
+
+echo
+echo "CUDA_HOME:"
+echo "$CUDA_HOME"
+
+echo
+echo "Python:"
+python --version
+
+echo
+echo "PyTorch / CUDA:"
+python -c "import torch; \
+print('PyTorch:', torch.__version__); \
+print('CUDA build:', torch.version.cuda); \
+print('CUDA available:', torch.cuda.is_available()); \
+print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'N/A'); \
+print('VRAM GB:', round(torch.cuda.get_device_properties(0).total_memory / 1024**3, 2) if torch.cuda.is_available() else 'N/A')"
+
+echo
+echo "vLLM:"
+python -c "import vllm; print('vLLM:', vllm.__version__)"
+
+echo
+echo "=========================================="
+echo "Starting experiment..."
+echo "=========================================="
+
+python -u experiments/agent_forest_llama_gsm8k.py
+
+EXIT_CODE=$?
+
+echo
+echo "=========================================="
+echo "Experiment finished"
+echo "Exit code: $EXIT_CODE"
+echo "=========================================="
+
+exit $EXIT_CODE

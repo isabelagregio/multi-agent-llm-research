@@ -1,0 +1,402 @@
+{
+  "experiment": "G - Risk-Gated Adaptive Debate",
+  "method_name": "RGAD",
+  "research_question": "Can adaptive interaction use observable utility/risk signals while preserving independent anchors to reduce cost and error propagation?",
+  "design": {
+    "trajectory_source": "Experiment B Debate traces",
+    "questions": 500,
+    "repetitions": 3,
+    "max_rounds": 2,
+    "policy_uses_gold": false,
+    "new_inference": "Anchor-aware R1/R2 judges only",
+    "bootstrap": "clustered by question_id"
+  },
+  "policy": {
+    "R0": "stop on initial consensus",
+    "R1": "stop on newly formed consensus or stagnant disagreement; otherwise continue",
+    "R2": "mandatory stop",
+    "selection": "anchor-aware judge sees independent anchors and revisions"
+  },
+  "method_summary": [
+    {
+      "method": "debate_r0_current",
+      "accuracy": 0.7433333333333333,
+      "mean_tokens_per_question": 2103.738,
+      "mean_rounds": 0
+    },
+    {
+      "method": "debate_r1_current",
+      "accuracy": 0.7433333333333333,
+      "mean_tokens_per_question": 3965.2986666666666,
+      "mean_rounds": 1
+    },
+    {
+      "method": "debate_r2_current",
+      "accuracy": 0.7446666666666667,
+      "mean_tokens_per_question": 5168.593333333333,
+      "mean_rounds": 2
+    },
+    {
+      "method": "adaptive_current",
+      "accuracy": 0.7426666666666667,
+      "mean_tokens_per_question": 3061.232666666667,
+      "mean_rounds": 0.6113333333333333
+    },
+    {
+      "method": "anchor_r1",
+      "accuracy": 0.7626666666666667,
+      "mean_tokens_per_question": 4698.209333333333,
+      "mean_rounds": 1
+    },
+    {
+      "method": "anchor_r2",
+      "accuracy": 0.7766666666666666,
+      "mean_tokens_per_question": 6244.069333333333,
+      "mean_rounds": 2
+    },
+    {
+      "method": "rgad",
+      "accuracy": 0.7646666666666667,
+      "mean_tokens_per_question": 3585.604,
+      "mean_rounds": 0.6113333333333333
+    }
+  ],
+  "paired_rgad_comparisons": [
+    {
+      "comparison": "rgad - debate_r0_current",
+      "accuracy_difference": 0.021333333333333426,
+      "accuracy_diff_ci95_low": 0.0040000000000000036,
+      "accuracy_diff_ci95_high": 0.038000000000000034,
+      "token_savings_fraction": -0.7043966501532035,
+      "token_savings_ci95_low": -0.8079897052523974,
+      "token_savings_ci95_high": -0.6066156402716818
+    },
+    {
+      "comparison": "rgad - debate_r1_current",
+      "accuracy_difference": 0.021333333333333426,
+      "accuracy_diff_ci95_low": 0.006000000000000005,
+      "accuracy_diff_ci95_high": 0.03733333333333333,
+      "token_savings_fraction": 0.09575436772480192,
+      "token_savings_ci95_low": 0.04551907945669916,
+      "token_savings_ci95_high": 0.14422897049699893
+    },
+    {
+      "comparison": "rgad - debate_r2_current",
+      "accuracy_difference": 0.020000000000000018,
+      "accuracy_diff_ci95_low": 0.005333333333333301,
+      "accuracy_diff_ci95_high": 0.03400000000000003,
+      "token_savings_fraction": 0.3062708228802421,
+      "token_savings_ci95_low": 0.27101970420716776,
+      "token_savings_ci95_high": 0.34071019030210276
+    },
+    {
+      "comparison": "rgad - adaptive_current",
+      "accuracy_difference": 0.02200000000000002,
+      "accuracy_diff_ci95_low": 0.009333333333333305,
+      "accuracy_diff_ci95_high": 0.03400000000000003,
+      "token_savings_fraction": -0.1712941780097733,
+      "token_savings_ci95_low": -0.17683154662014766,
+      "token_savings_ci95_high": -0.16546717086795798
+    },
+    {
+      "comparison": "rgad - anchor_r1",
+      "accuracy_difference": 0.0020000000000000018,
+      "accuracy_diff_ci95_low": -0.010000000000000009,
+      "accuracy_diff_ci95_high": 0.014000000000000012,
+      "token_savings_fraction": 0.23681476375254462,
+      "token_savings_ci95_low": 0.1937267203340056,
+      "token_savings_ci95_high": 0.27809227787916513
+    },
+    {
+      "comparison": "rgad - anchor_r2",
+      "accuracy_difference": -0.0119999999999999,
+      "accuracy_diff_ci95_low": -0.020000000000000018,
+      "accuracy_diff_ci95_high": -0.004666666666666705,
+      "token_savings_fraction": 0.42575845837287307,
+      "token_savings_ci95_low": 0.3966919252491233,
+      "token_savings_ci95_high": 0.45427870187000563
+    }
+  ],
+  "stop_distribution": {
+    "0": {
+      "count": 869,
+      "fraction": 0.5793333333333334
+    },
+    "1": {
+      "count": 345,
+      "fraction": 0.23
+    },
+    "2": {
+      "count": 286,
+      "fraction": 0.19066666666666668
+    }
+  },
+  "stop_reason_summary": [
+    {
+      "stop_reason": "active_unresolved_disagreement",
+      "count": 286,
+      "fraction": 0.19066666666666668,
+      "rgad_accuracy": 0.32517482517482516,
+      "mean_rounds": 2
+    },
+    {
+      "stop_reason": "initial_consensus",
+      "count": 869,
+      "fraction": 0.5793333333333334,
+      "rgad_accuracy": 0.9286536248561565,
+      "mean_rounds": 0
+    },
+    {
+      "stop_reason": "new_consensus_after_disagreement",
+      "count": 322,
+      "fraction": 0.21466666666666667,
+      "rgad_accuracy": 0.7391304347826086,
+      "mean_rounds": 1
+    },
+    {
+      "stop_reason": "stagnant_disagreement",
+      "count": 23,
+      "fraction": 0.015333333333333332,
+      "rgad_accuracy": 0.391304347826087,
+      "mean_rounds": 1
+    }
+  ],
+  "risk_case_analysis": [
+    {
+      "risk_case": "contamination_r1",
+      "round": 1,
+      "n": 23,
+      "current_judge_accuracy": 0.043478260869565216,
+      "anchor_judge_accuracy": 0.043478260869565216,
+      "anchor_minus_current": 0.0
+    },
+    {
+      "risk_case": "harmful_consensus_r1",
+      "round": 1,
+      "n": 80,
+      "current_judge_accuracy": 0.025,
+      "anchor_judge_accuracy": 0,
+      "anchor_minus_current": -0.025
+    },
+    {
+      "risk_case": "correct_candidate_available_r1",
+      "round": 1,
+      "n": 1226,
+      "current_judge_accuracy": 0.8923327895595432,
+      "anchor_judge_accuracy": 0.9192495921696574,
+      "anchor_minus_current": 0.0269168026101142
+    },
+    {
+      "risk_case": "contamination_r2",
+      "round": 2,
+      "n": 31,
+      "current_judge_accuracy": 0.1935483870967742,
+      "anchor_judge_accuracy": 0.12903225806451613,
+      "anchor_minus_current": -0.06451612903225806
+    },
+    {
+      "risk_case": "harmful_consensus_r2",
+      "round": 2,
+      "n": 65,
+      "current_judge_accuracy": 0.03076923076923077,
+      "anchor_judge_accuracy": 0,
+      "anchor_minus_current": -0.03076923076923077
+    },
+    {
+      "risk_case": "correct_candidate_available_r2",
+      "round": 2,
+      "n": 1253,
+      "current_judge_accuracy": 0.8858739026336792,
+      "anchor_judge_accuracy": 0.928172386272945,
+      "anchor_minus_current": 0.042298483639265805
+    }
+  ],
+  "repetition_summaries": [
+    {
+      "repetition": 1,
+      "questions": 500,
+      "methods": {
+        "debate_r0_current": {
+          "accuracy": 0.736,
+          "mean_tokens_per_question": 2100.266,
+          "mean_rounds": 0
+        },
+        "debate_r1_current": {
+          "accuracy": 0.74,
+          "mean_tokens_per_question": 3966.178,
+          "mean_rounds": 1
+        },
+        "debate_r2_current": {
+          "accuracy": 0.75,
+          "mean_tokens_per_question": 5170.406,
+          "mean_rounds": 2
+        },
+        "adaptive_current": {
+          "accuracy": 0.746,
+          "mean_tokens_per_question": 3040.308,
+          "mean_rounds": 0.608
+        },
+        "anchor_r1": {
+          "accuracy": 0.758,
+          "mean_tokens_per_question": 4700.782,
+          "mean_rounds": 1
+        },
+        "anchor_r2": {
+          "accuracy": 0.784,
+          "mean_tokens_per_question": 6240.972,
+          "mean_rounds": 2
+        },
+        "rgad": {
+          "accuracy": 0.756,
+          "mean_tokens_per_question": 3562.922,
+          "mean_rounds": 0.608
+        }
+      },
+      "stop_distribution": {
+        "0": {
+          "count": 292,
+          "fraction": 0.584
+        },
+        "1": {
+          "count": 112,
+          "fraction": 0.224
+        },
+        "2": {
+          "count": 96,
+          "fraction": 0.192
+        }
+      },
+      "stop_reasons": {
+        "active_unresolved_disagreement": 96,
+        "initial_consensus": 292,
+        "new_consensus_after_disagreement": 107,
+        "stagnant_disagreement": 5
+      },
+      "anchor_judge_generation_wall_seconds": 103.45829145144671
+    },
+    {
+      "repetition": 2,
+      "questions": 500,
+      "methods": {
+        "debate_r0_current": {
+          "accuracy": 0.75,
+          "mean_tokens_per_question": 2096.896,
+          "mean_rounds": 0
+        },
+        "debate_r1_current": {
+          "accuracy": 0.738,
+          "mean_tokens_per_question": 3972.958,
+          "mean_rounds": 1
+        },
+        "debate_r2_current": {
+          "accuracy": 0.74,
+          "mean_tokens_per_question": 5168.094,
+          "mean_rounds": 2
+        },
+        "adaptive_current": {
+          "accuracy": 0.734,
+          "mean_tokens_per_question": 3044.206,
+          "mean_rounds": 0.604
+        },
+        "anchor_r1": {
+          "accuracy": 0.758,
+          "mean_tokens_per_question": 4707.036,
+          "mean_rounds": 1
+        },
+        "anchor_r2": {
+          "accuracy": 0.76,
+          "mean_tokens_per_question": 6247.494,
+          "mean_rounds": 2
+        },
+        "rgad": {
+          "accuracy": 0.754,
+          "mean_tokens_per_question": 3567.234,
+          "mean_rounds": 0.604
+        }
+      },
+      "stop_distribution": {
+        "0": {
+          "count": 293,
+          "fraction": 0.586
+        },
+        "1": {
+          "count": 112,
+          "fraction": 0.224
+        },
+        "2": {
+          "count": 95,
+          "fraction": 0.19
+        }
+      },
+      "stop_reasons": {
+        "new_consensus_after_disagreement": 103,
+        "initial_consensus": 293,
+        "active_unresolved_disagreement": 95,
+        "stagnant_disagreement": 9
+      },
+      "anchor_judge_generation_wall_seconds": 103.82723949570209
+    },
+    {
+      "repetition": 3,
+      "questions": 500,
+      "methods": {
+        "debate_r0_current": {
+          "accuracy": 0.744,
+          "mean_tokens_per_question": 2114.052,
+          "mean_rounds": 0
+        },
+        "debate_r1_current": {
+          "accuracy": 0.752,
+          "mean_tokens_per_question": 3956.76,
+          "mean_rounds": 1
+        },
+        "debate_r2_current": {
+          "accuracy": 0.744,
+          "mean_tokens_per_question": 5167.28,
+          "mean_rounds": 2
+        },
+        "adaptive_current": {
+          "accuracy": 0.748,
+          "mean_tokens_per_question": 3099.184,
+          "mean_rounds": 0.622
+        },
+        "anchor_r1": {
+          "accuracy": 0.772,
+          "mean_tokens_per_question": 4686.81,
+          "mean_rounds": 1
+        },
+        "anchor_r2": {
+          "accuracy": 0.786,
+          "mean_tokens_per_question": 6243.742,
+          "mean_rounds": 2
+        },
+        "rgad": {
+          "accuracy": 0.784,
+          "mean_tokens_per_question": 3626.656,
+          "mean_rounds": 0.622
+        }
+      },
+      "stop_distribution": {
+        "0": {
+          "count": 284,
+          "fraction": 0.568
+        },
+        "1": {
+          "count": 121,
+          "fraction": 0.242
+        },
+        "2": {
+          "count": 95,
+          "fraction": 0.19
+        }
+      },
+      "stop_reasons": {
+        "initial_consensus": 284,
+        "new_consensus_after_disagreement": 112,
+        "active_unresolved_disagreement": 95,
+        "stagnant_disagreement": 9
+      },
+      "anchor_judge_generation_wall_seconds": 102.04028809722513
+    }
+  ]
+}

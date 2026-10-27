@@ -1,0 +1,8 @@
+analysis,round,n,one_correct_before_count,correct_agent_contamination_count,correct_agent_contamination_rate,contamination_ci95_low,contamination_ci95_high,corrective_convergence_count,corrective_convergence_rate,new_consensus_count,harmful_consensus_count,harmful_consensus_rate,beneficial_consensus_count,one_correct_count,judge_error_one_correct_count,judge_error_one_correct_rate,both_correct_count,judge_error_both_correct_count,judge_error_both_correct_rate,both_wrong_count,judge_rescue_both_wrong_count,judge_rescue_both_wrong_rate
+interaction,1,1500,222,23,0.1036036036036036,0.06578792933036817,0.14602579322253398,143,0.6441441441441441,326,79,0.24233128834355827,247,,,,,,,,,
+interaction,2,1500,142,31,0.21830985915492956,0.15067720671541868,0.28847656249999987,51,0.3591549295774648,128,66,0.515625,62,,,,,,,,,
+interaction,3,1500,95,14,0.14736842105263157,0.07476635514018691,0.22989014342386327,22,0.23157894736842105,80,54,0.675,26,,,,,,,,,
+judge,0,1500,,,,,,,,,,,,222,68,0.3063063063063063,806,1,0.0012406947890818859,472,156,0.3305084745762712
+judge,1,1500,,,,,,,,,,,,142,71,0.5,1061,39,0.036757775683317624,297,22,0.07407407407407407
+judge,2,1500,,,,,,,,,,,,95,54,0.5684210526315789,1102,43,0.03901996370235935,303,17,0.056105610561056105
+judge,3,1500,,,,,,,,,,,,75,45,0.6,1121,59,0.05263157894736842,304,9,0.029605263157894735

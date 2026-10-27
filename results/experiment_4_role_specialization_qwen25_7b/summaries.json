@@ -1,0 +1,19 @@
+[
+  {
+    "repetition": 1,
+    "model": "Qwen2.5-7B-Instruct",
+    "questions": 100,
+    "single_accuracy": 0.48,
+    "forest_accuracy": 0.49,
+    "self_reflection_accuracy": 0.3,
+    "peer_review_accuracy": 0.37,
+    "reflection_positive_corrections": 2,
+    "reflection_negative_corrections": 13,
+    "peer_positive_corrections": 3,
+    "peer_negative_corrections": 14,
+    "single_total_tokens": 67559,
+    "forest_total_tokens": 207901,
+    "reflection_total_tokens": 337822,
+    "peer_total_tokens": 341077
+  }
+]

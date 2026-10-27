@@ -1,0 +1,5 @@
+stop_reason,count,fraction,rgad_accuracy,mean_rounds
+active_unresolved_disagreement,286,0.19066666666666668,0.32517482517482516,2
+initial_consensus,869,0.5793333333333334,0.9286536248561565,0
+new_consensus_after_disagreement,322,0.21466666666666667,0.7391304347826086,1
+stagnant_disagreement,23,0.015333333333333332,0.391304347826087,1

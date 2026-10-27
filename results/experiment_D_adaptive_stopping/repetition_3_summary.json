@@ -1,0 +1,91 @@
+{
+  "repetition": 3,
+  "questions": 500,
+  "fixed": {
+    "0": {
+      "round": 0,
+      "accuracy": 0.732,
+      "mean_tokens_per_question": 562.37
+    },
+    "1": {
+      "round": 1,
+      "accuracy": 0.786,
+      "mean_tokens_per_question": 2699.376
+    },
+    "2": {
+      "round": 2,
+      "accuracy": 0.774,
+      "mean_tokens_per_question": 4437.636
+    },
+    "3": {
+      "round": 3,
+      "accuracy": 0.774,
+      "mean_tokens_per_question": 6133.01
+    }
+  },
+  "adaptive": {
+    "accuracy": 0.786,
+    "mean_rounds": 1.186,
+    "mean_tokens_per_question": 3238.426,
+    "stop_distribution": {
+      "1": {
+        "count": 426,
+        "fraction": 0.852
+      },
+      "2": {
+        "count": 55,
+        "fraction": 0.11
+      },
+      "3": {
+        "count": 19,
+        "fraction": 0.038
+      }
+    },
+    "token_savings_vs_fixed_r2_fraction": 0.27023622487288285,
+    "token_savings_vs_fixed_r3_fraction": 0.47196792439601437,
+    "premature_stop_count": 3,
+    "premature_stop_rate": 0.006,
+    "avoided_later_degradation_count": 9,
+    "avoided_later_degradation_rate": 0.018,
+    "transitions": {
+      "correct_to_correct": 391,
+      "wrong_to_wrong": 165,
+      "wrong_to_correct": 32,
+      "correct_to_wrong": 5
+    },
+    "by_level": {
+      "1": {
+        "n": 100,
+        "accuracy": 0.97,
+        "mean_rounds": 1,
+        "mean_tokens_per_question": 1811.75
+      },
+      "2": {
+        "n": 100,
+        "accuracy": 0.89,
+        "mean_rounds": 1.11,
+        "mean_tokens_per_question": 2683.78
+      },
+      "3": {
+        "n": 100,
+        "accuracy": 0.86,
+        "mean_rounds": 1.09,
+        "mean_tokens_per_question": 2904.13
+      },
+      "4": {
+        "n": 100,
+        "accuracy": 0.73,
+        "mean_rounds": 1.32,
+        "mean_tokens_per_question": 4048.57
+      },
+      "5": {
+        "n": 100,
+        "accuracy": 0.48,
+        "mean_rounds": 1.41,
+        "mean_tokens_per_question": 4743.9
+      }
+    }
+  },
+  "timing_note": "Primary fixed/adaptive results are paired on the same full R3 trajectories. Adaptive token counts are counterfactual consumed tokens. Wall proxies are not measured adaptive runtime.",
+  "reference_pipeline_wall_seconds": 0.6437648739376995
+}

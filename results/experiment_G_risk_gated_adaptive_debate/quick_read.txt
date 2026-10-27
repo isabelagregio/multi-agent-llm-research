@@ -1,0 +1,25 @@
+EXPERIMENT G — RISK-GATED ADAPTIVE DEBATE (RGAD)
+
+debate_r0_current      acc=74.33% tokens/q=2103.7 rounds=0.000
+debate_r1_current      acc=74.33% tokens/q=3965.3 rounds=1.000
+debate_r2_current      acc=74.47% tokens/q=5168.6 rounds=2.000
+adaptive_current       acc=74.27% tokens/q=3061.2 rounds=0.611
+anchor_r1              acc=76.27% tokens/q=4698.2 rounds=1.000
+anchor_r2              acc=77.67% tokens/q=6244.1 rounds=2.000
+rgad                   acc=76.47% tokens/q=3585.6 rounds=0.611
+
+RGAD PAIRED COMPARISONS
+rgad - debate_r0_current: acc=+2.13pp [+0.40,+3.80] token_savings=-70.44%
+rgad - debate_r1_current: acc=+2.13pp [+0.60,+3.73] token_savings=+9.58%
+rgad - debate_r2_current: acc=+2.00pp [+0.53,+3.40] token_savings=+30.63%
+rgad - adaptive_current: acc=+2.20pp [+0.93,+3.40] token_savings=-17.13%
+rgad - anchor_r1: acc=+0.20pp [-1.00,+1.40] token_savings=+23.68%
+rgad - anchor_r2: acc=-1.20pp [-2.00,-0.47] token_savings=+42.58%
+
+RISK CASES
+contamination_r1: n=23 current=4.35% anchor=4.35% delta=+0.00pp
+harmful_consensus_r1: n=80 current=2.50% anchor=0.00% delta=-2.50pp
+correct_candidate_available_r1: n=1226 current=89.23% anchor=91.92% delta=+2.69pp
+contamination_r2: n=31 current=19.35% anchor=12.90% delta=-6.45pp
+harmful_consensus_r2: n=65 current=3.08% anchor=0.00% delta=-3.08pp
+correct_candidate_available_r2: n=1253 current=88.59% anchor=92.82% delta=+4.23pp

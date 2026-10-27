@@ -1,0 +1,38 @@
+{
+  "single_accuracy": {
+    "values": [
+      0.53,
+      0.525,
+      0.55
+    ],
+    "mean": 0.535,
+    "std_population": 0.010801234497346443
+  },
+  "forest_accuracy": {
+    "values": [
+      0.54,
+      0.525,
+      0.55
+    ],
+    "mean": 0.5383333333333333,
+    "std_population": 0.010274023338281637
+  },
+  "self_refine_accuracy": {
+    "values": [
+      0.62,
+      0.63,
+      0.68
+    ],
+    "mean": 0.6433333333333333,
+    "std_population": 0.026246692913372727
+  },
+  "student_critic_accuracy": {
+    "values": [
+      0.565,
+      0.61,
+      0.605
+    ],
+    "mean": 0.5933333333333333,
+    "std_population": 0.02013840995599097
+  }
+}

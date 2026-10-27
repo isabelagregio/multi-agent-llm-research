@@ -1,0 +1,37 @@
+EXPERIMENT C -- INTERACTION UTILITY SIGNALS
+============================================================
+Input trace rows: 1500
+Goal: identify observable signals that predict whether another interaction/update helps.
+
+Candidate routing signals
+------------------------------------------------------------
+self_refine | answer_unstable: coverage=25.47%, utility(TRUE)=4.71%, utility(FALSE)=-1.34%, lift=6.05%, 95% CI=[3.64%, 8.57%]
+    TRUE: help=18.67%, harm=17.11%
+debate | disagreement: coverage=26.98%, utility(TRUE)=0.74%, utility(FALSE)=-0.70%, lift=1.44%, 95% CI=[-0.93%, 3.78%]
+    TRUE: help=17.25%, harm=27.99%
+student_critic | critic_reject: coverage=33.73%, utility(TRUE)=-0.26%, utility(FALSE)=4.12%, lift=-4.39%, 95% CI=[-6.93%, -1.87%]
+    TRUE: help=16.20%, harm=24.31%
+
+Difficulty (descriptive only; not a deployment routing signal)
+------------------------------------------------------------
+debate | Level 1: delta=0.33%, help=25.00%, harm=1.81%
+debate | Level 2: delta=-0.67%, help=23.81%, harm=4.65%
+debate | Level 3: delta=-1.67%, help=26.67%, harm=8.75%
+debate | Level 4: delta=1.67%, help=23.53%, harm=9.60%
+debate | Level 5: delta=0.33%, help=16.56%, harm=17.48%
+self_refine | Level 1: delta=3.67%, help=36.11%, harm=0.76%
+self_refine | Level 2: delta=7.67%, help=36.92%, harm=0.43%
+self_refine | Level 3: delta=19.00%, help=50.43%, harm=0.54%
+self_refine | Level 4: delta=21.00%, help=40.62%, harm=1.43%
+self_refine | Level 5: delta=20.00%, help=30.14%, harm=3.30%
+student_critic | Level 1: delta=2.67%, help=30.56%, harm=1.14%
+student_critic | Level 2: delta=5.33%, help=30.77%, harm=1.70%
+student_critic | Level 3: delta=13.67%, help=37.39%, harm=1.08%
+student_critic | Level 4: delta=16.33%, help=33.75%, harm=3.57%
+student_critic | Level 5: delta=12.67%, help=19.62%, harm=3.30%
+
+Interpretation rule for Experiment D
+------------------------------------------------------------
+Prefer signals with positive utility when TRUE, lower utility when FALSE, and a positive utility lift whose clustered-bootstrap CI is reasonably stable.
+Do not select a routing policy here; Experiment C only identifies candidate signals.
+Critic confidence is not analyzed because Experiment B did not record a calibrated confidence score.

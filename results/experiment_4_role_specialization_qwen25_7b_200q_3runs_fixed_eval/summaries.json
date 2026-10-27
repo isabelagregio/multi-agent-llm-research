@@ -1,0 +1,36 @@
+[
+  {
+    "repetition": 1,
+    "model": "Qwen2.5-7B-Instruct",
+    "questions": 200,
+    "single_accuracy": 0.545,
+    "forest_accuracy": 0.59,
+    "self_reflection_accuracy": 0.675,
+    "peer_review_accuracy": 0.675,
+    "reflection_positive_corrections": 19,
+    "reflection_negative_corrections": 2,
+    "peer_positive_corrections": 32,
+    "peer_negative_corrections": 4,
+    "single_total_tokens": 135562,
+    "forest_total_tokens": 415829,
+    "reflection_total_tokens": 666265,
+    "peer_total_tokens": 685660
+  },
+  {
+    "repetition": 2,
+    "model": "Qwen2.5-7B-Instruct",
+    "questions": 200,
+    "single_accuracy": 0.525,
+    "forest_accuracy": 0.62,
+    "self_reflection_accuracy": 0.71,
+    "peer_review_accuracy": 0.715,
+    "reflection_positive_corrections": 31,
+    "reflection_negative_corrections": 3,
+    "peer_positive_corrections": 45,
+    "peer_negative_corrections": 5,
+    "single_total_tokens": 141520,
+    "forest_total_tokens": 418203,
+    "reflection_total_tokens": 676541,
+    "peer_total_tokens": 695695
+  }
+]

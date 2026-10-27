@@ -1,0 +1,46 @@
+{
+  "repetition": 1,
+  "questions": 200,
+  "single_accuracy": 0.53,
+  "forest_accuracy": 0.54,
+  "self_refine_accuracy": 0.62,
+  "student_critic_accuracy": 0.565,
+  "forest_corrections": {
+    "positive_corrections": 2,
+    "negative_corrections": 0,
+    "positive_correction_rate": 0.02127659574468085,
+    "negative_correction_rate": 0.0
+  },
+  "self_refine_corrections": {
+    "positive_corrections": 24,
+    "negative_corrections": 6,
+    "positive_correction_rate": 0.2553191489361702,
+    "negative_correction_rate": 0.05660377358490566
+  },
+  "student_critic_corrections": {
+    "positive_corrections": 21,
+    "negative_corrections": 14,
+    "positive_correction_rate": 0.22340425531914893,
+    "negative_correction_rate": 0.1320754716981132
+  },
+  "critic_quality": {
+    "true_reject": 78,
+    "false_reject": 75,
+    "true_accept": 154,
+    "false_accept": 93,
+    "unknown_verdict": 0,
+    "error_detection_precision": 0.5098039215686274,
+    "error_detection_recall": 0.45614035087719296,
+    "error_detection_f1": 0.48148148148148145
+  },
+  "single_total_tokens": 113929,
+  "forest_total_tokens": 574028,
+  "self_refine_total_tokens": 890283,
+  "student_critic_total_tokens": 635347,
+  "stage_wall_time_seconds": {
+    "single": 28.88843819615431,
+    "forest_extra": 87.525086308131,
+    "self_refine_extra": 103.81832823692821,
+    "student_critic_extra": 62.89134858176112
+  }
+}

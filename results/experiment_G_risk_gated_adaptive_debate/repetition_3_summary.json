@@ -1,0 +1,62 @@
+{
+  "repetition": 3,
+  "questions": 500,
+  "methods": {
+    "debate_r0_current": {
+      "accuracy": 0.744,
+      "mean_tokens_per_question": 2114.052,
+      "mean_rounds": 0
+    },
+    "debate_r1_current": {
+      "accuracy": 0.752,
+      "mean_tokens_per_question": 3956.76,
+      "mean_rounds": 1
+    },
+    "debate_r2_current": {
+      "accuracy": 0.744,
+      "mean_tokens_per_question": 5167.28,
+      "mean_rounds": 2
+    },
+    "adaptive_current": {
+      "accuracy": 0.748,
+      "mean_tokens_per_question": 3099.184,
+      "mean_rounds": 0.622
+    },
+    "anchor_r1": {
+      "accuracy": 0.772,
+      "mean_tokens_per_question": 4686.81,
+      "mean_rounds": 1
+    },
+    "anchor_r2": {
+      "accuracy": 0.786,
+      "mean_tokens_per_question": 6243.742,
+      "mean_rounds": 2
+    },
+    "rgad": {
+      "accuracy": 0.784,
+      "mean_tokens_per_question": 3626.656,
+      "mean_rounds": 0.622
+    }
+  },
+  "stop_distribution": {
+    "0": {
+      "count": 284,
+      "fraction": 0.568
+    },
+    "1": {
+      "count": 121,
+      "fraction": 0.242
+    },
+    "2": {
+      "count": 95,
+      "fraction": 0.19
+    }
+  },
+  "stop_reasons": {
+    "initial_consensus": 284,
+    "new_consensus_after_disagreement": 112,
+    "active_unresolved_disagreement": 95,
+    "stagnant_disagreement": 9
+  },
+  "anchor_judge_generation_wall_seconds": 102.04028809722513
+}

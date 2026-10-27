@@ -1,0 +1,2 @@
+repetition,model,questions,single_accuracy,forest_accuracy,self_reflection_accuracy,peer_review_accuracy,reflection_positive_corrections,reflection_negative_corrections,peer_positive_corrections,peer_negative_corrections,single_total_tokens,forest_total_tokens,reflection_total_tokens,peer_total_tokens
+1,Qwen2.5-7B-Instruct,100,0.48,0.49,0.3,0.37,2,13,3,14,67559,207901,337822,341077

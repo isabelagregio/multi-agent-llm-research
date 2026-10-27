@@ -1,0 +1,23 @@
+EXPERIMENT E — COST-AWARE EVALUATION
+
+Strategy summary:
+  R0: accuracy=73.53% [95% CI 70.00, 77.00] | tokens/q=563.0 | mean rounds=0.000 | correct/1k tokens=1.306
+  R1: accuracy=78.20% [95% CI 74.93, 81.47] | tokens/q=2695.8 | mean rounds=1.000 | correct/1k tokens=0.290
+  R2: accuracy=78.33% [95% CI 75.00, 81.60] | tokens/q=4428.0 | mean rounds=2.000 | correct/1k tokens=0.177
+  R3: accuracy=78.33% [95% CI 75.07, 81.73] | tokens/q=6116.1 | mean rounds=3.000 | correct/1k tokens=0.128
+  Adaptive: accuracy=78.73% [95% CI 75.47, 82.07] | tokens/q=3244.3 | mean rounds=1.193 | correct/1k tokens=0.243
+
+Adaptive vs fixed strategies:
+  Adaptive - R0: accuracy diff=+5.20 pp [95% CI +3.73, +6.87] | token savings=-476.26% [95% CI -494.22, -458.18]
+  Adaptive - R1: accuracy diff=+0.53 pp [95% CI +0.06, +1.07] | token savings=-20.35% [95% CI -23.96, -16.67]
+  Adaptive - R2: accuracy diff=+0.40 pp [95% CI -0.20, +1.00] | token savings=+26.73% [95% CI +24.57, +28.91]
+  Adaptive - R3: accuracy diff=+0.40 pp [95% CI -0.33, +1.20] | token savings=+46.95% [95% CI +45.39, +48.55]
+
+Pareto-efficient strategies:
+  R0 (accuracy=73.53%, tokens/q=563.0)
+  R1 (accuracy=78.20%, tokens/q=2695.8)
+  Adaptive (accuracy=78.73%, tokens/q=3244.3)
+
+Actual runtime validation:
+  Not available. No runtime_validation_rep_*.json files were found.
+  Token results remain valid; real latency savings have not yet been measured.
