@@ -3,7 +3,7 @@
 Research project investigating **when LLM agents should interact, when they should stop, and how adaptive routing can reduce computational cost and harmful error propagation**.
 
 <p align="center">
-  <img src="results/experiment_G_risk_gated_adaptation/accuracy_vs_tokens.png" width="760" alt="Accuracy versus token cost">
+  <img src="results/experiment_G_risk_gated_adaptative_debate/accuracy_vs_tokens.png" width="760" alt="Accuracy versus token cost">
 </p>
 
 ## Research Question
