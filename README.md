@@ -23,16 +23,6 @@ The experiments show that additional interaction is **not monotonically benefici
 - Additional interaction can also introduce `correct → wrong` transitions.
 - In Debate, agents can converge to an incorrect answer after one agent initially had the correct solution.
 - Semantic answer stability is a useful signal for deciding when additional reasoning is unnecessary.
-
-Adaptive Self-Refine achieved approximately:
-
-| Strategy | Accuracy | Tokens / question |
-|---|---:|---:|
-| R1 | 78.20% | 2,696 |
-| R2 | 78.33% | 4,428 |
-| R3 | 78.33% | 6,116 |
-| **Adaptive** | **78.73%** | **3,244** |
-
 Adaptive stopping used about **27% fewer tokens than R2** and **47% fewer than R3** while maintaining comparable accuracy.
 
 ## Current Method: Risk-Aware Adaptive Routing
@@ -61,19 +51,6 @@ Runtime signals include:
 - interaction depth.
 
 The routing policy does **not** use ground-truth answers or benchmark difficulty at inference time.
-
-## Repository Structure
-
-```text
-experiments/   # experimental code
-slurm/         # HPC execution scripts
-results/
-  figures/     # selected figures
-  summary/     # compact experimental summaries
-docs/          # research material
-```
-
-Large model checkpoints, raw datasets, logs, and full experimental traces are intentionally excluded.
 
 ## Research Context
 
