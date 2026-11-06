@@ -14,9 +14,9 @@
 set -euo pipefail
 
 PROJECT_ROOT="/lustre06/project/6087921/isa1909"
-SCRIPT="${PROJECT_ROOT}/experiments/experiment_B2_protocol_validation.py"
+SCRIPT="${PROJECT_ROOT}/experiments/experiment_B_protocol_validation.py"
 RAW_RESULTS_B="${PROJECT_ROOT}/results/experiment_7_round_scaling_difficulty/raw_results.jsonl"
-RESULTS_DIR="${PROJECT_ROOT}/results/experiment_B2_protocol_validation"
+RESULTS_DIR="${PROJECT_ROOT}/results/experiment_B_protocol_validation"
 
 cd "${PROJECT_ROOT}"
 mkdir -p logs "${RESULTS_DIR}"

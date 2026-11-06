@@ -14,8 +14,8 @@
 set -euo pipefail
 
 PROJECT_ROOT="/home/isa1909/projects/def-sigmagao/isa1909"
-SCRIPT_NAME="experiment_5_single_forest_selfrefine_studentcritic.py"
-RESULTS_SUBDIR="experiment_5_single_forest_selfrefine_studentcritic"
+SCRIPT_NAME="studycase_D_single_forest_selfrefine_studentcritic.py"
+RESULTS_SUBDIR="studycase_D_single_forest_selfrefine_studentcritic"
 
 cd "$PROJECT_ROOT"
 mkdir -p logs
